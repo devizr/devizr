@@ -1,0 +1,24 @@
+{
+  "name": "devizr",
+  "version": "0.4.7",
+  "description": "The device asset manager",
+  "main": "devizr.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/up/devizr.git"
+  },
+  "keywords": [
+    "device",
+    "asset",
+    "manager"
+  ],
+  "author": "Uli Preuss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/up/devizr/issues"
+  },
+  "homepage": "https://github.com/up/devizr"
+}
