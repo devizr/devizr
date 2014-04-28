@@ -46,39 +46,39 @@ getTextFile('../src/devizr.tests.js', function(file_content) {
     var checked = browser >= 4 || browser === -1 ? 'checked' : '';
     var className = checked ? 'checked' : 'unchecked';
     html = html.replace(
-			'{{name}}', 
-		  '#### ' + 
-		  '<input class="checkbox_input" type="checkbox" ' + checked + ' id="' + name + '" value="' + name + '"> ' + 
-			'<label for="' + name + '"><span style="font-weight: normal"> Add test </span><i>' + name + '</i></label>'
-		);
+      '{{name}}', 
+      '#### ' + 
+      '<input class="checkbox_input" type="checkbox" ' + checked + ' id="' + name + '" value="' + name + '"> ' + 
+      '<label for="' + name + '"><span style="font-weight: normal"> Add test </span><i>' + name + '</i></label>'
+    );
 
     html = converter.makeHtml(html);
     document.querySelector('body').innerHTML += '' +
-		  '<div id="wrapper_' + name + 
-		  '" class="' + className + '">' + html + '</div>';
+      '<div id="wrapper_' + name + 
+      '" class="' + className + '">' + html + '</div>';
 
   });
 
-	document.querySelector('button').addEventListener('click', function(){
-		var divs = document.getElementsByTagName('div');
- 	  for(var i = 0; i < divs.length; i++) {
-		  divs[i].className+= ' hide';
- 	  }
-	}, false);
+  document.querySelector('button').addEventListener('click', function(){
+    var divs = document.getElementsByTagName('div');
+    for(var i = 0; i < divs.length; i++) {
+      divs[i].className+= ' hide';
+    }
+  }, false);
 
-	var inputs = document.getElementsByTagName('input');
+  var inputs = document.getElementsByTagName('input');
   for(var i = 0; i < inputs.length; i++) {
-	 inputs[i].addEventListener('click', function(){
-		 var id = 'wrapper_' + this.value;
-		 var hide = !!~document.getElementById(id).className.indexOf('hide') ? 'hide ' : '';
-		 if(this.checked) {
-			 document.getElementById(id).className = hide + 'checked';
-		 } else {
-			 document.getElementById(id).className = hide + 'unchecked';
-		 }
-	 }, false);
- }
+    inputs[i].addEventListener('click', function(){
+      var id = 'wrapper_' + this.value;
+      var hide = !!~document.getElementById(id).className.indexOf('hide') ? 'hide ' : '';
+      if(this.checked) {
+        document.getElementById(id).className = hide + 'checked';
+      } else {
+        document.getElementById(id).className = hide + 'unchecked';
+      }
+    }, false);
+  }
  
- hljs.initHighlighting();
+  hljs.initHighlighting();
  
 });
