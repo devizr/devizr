@@ -1,3 +1,4 @@
+
 test = function(){};
 tests = {
 
@@ -18,7 +19,7 @@ tests = {
    *     if(attr){
    *       images[i].src = attr;
    *     }
-    *   }
+   *   }
    * }
    * ```
    * > ?
