@@ -1,5 +1,6 @@
 /*!
- * devizrJS ##VERSION##
+ * devizr ##VERSION##
+ * Device asset manager and JS feature detector
  * Copyright (c) 2013, ##YEAR## Uli Preuss
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR

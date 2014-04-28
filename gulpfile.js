@@ -36,11 +36,11 @@ gulp.task('build', function() {
     
     return gulp.src('./src/devizr.app.js')
       .pipe(replace(/\/\/{{TESTS}}/i, tests))
+      .pipe(replace(/##VERSION##/i, pkg.version))
+      .pipe(replace(/##YEAR##/i, new Date().getFullYear()))
       .pipe(concat('devizr.js'))
       .pipe(gulp.dest('dest'))
       .pipe(uglify({ preserveComments: 'some' }))
-      .pipe(replace(/##VERSION##/i, pkg.version))
-      .pipe(replace(/##YEAR##/i, new Date().getFullYear()))
       .pipe(concat('devizr.min.js'))
       .pipe(gulp.dest('dest'));
   
