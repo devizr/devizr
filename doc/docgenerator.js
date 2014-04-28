@@ -15,7 +15,6 @@ var converter = new Showdown.converter();
 getTextFile('../src/devizr.tests.js', function(file_content) {
 
   var lines, html, name,
-  //comments = file_content.match(/(?:\/\*\*\*(?:[\s\S]*?)\*\/)|(?:([\s;])+\/\/(?:.*)$)/gm); 
   comments = file_content.match(/(?:\/\*\*\*(?:[\s\S]*?)\*\/[^\*\/:]*)/gm);
 
   comments.forEach(function(comment) {
@@ -60,15 +59,11 @@ getTextFile('../src/devizr.tests.js', function(file_content) {
 
   });
 
-  window.addEventListener('load', function(){
-	  alert('xxx')
-  }, false);
-	
 	document.querySelector('button').addEventListener('click', function(){
 		var divs = document.getElementsByTagName('div');
  	  for(var i = 0; i < divs.length; i++) {
-		 divs[i].className+= ' hide';
- 	 }
+		  divs[i].className+= ' hide';
+ 	  }
 	}, false);
 
 	var inputs = document.getElementsByTagName('input');
@@ -83,6 +78,7 @@ getTextFile('../src/devizr.tests.js', function(file_content) {
 		 }
 	 }, false);
  }
-	
-
+ 
+ hljs.initHighlighting();
+ 
 });
