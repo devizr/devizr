@@ -54,8 +54,7 @@ getTextFile('../src/devizr.tests.js', function(file_content) {
 
     html = converter.makeHtml(html);
     document.querySelector('body').innerHTML += '' +
-      '<div id="wrapper_' + name + 
-      '" class="' + className + '">' + html + '</div>';
+      '<div id="wrapper_' + name + '" class="' + className + '">' + html + '</div>';
 
   });
 
