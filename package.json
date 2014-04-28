@@ -1,10 +1,10 @@
 {
   "name": "devizr",
-  "version": "0.4.7",
-  "description": "The device asset manager",
+  "version": "0.5.0",
+  "description": "Device asset manager",
   "main": "devizr.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "jasmine-node test.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/up/devizr/issues"
   },
-  "homepage": "https://github.com/up/devizr"
+  "homepage": "https://github.com/up/devizr",
+  "devDependencies": {
+    "gulp-jasmine": "^0.2.0"
+  },
+  "dependencies": {
+    "gulp-jshint": "^1.5.5"
+  }
 }
