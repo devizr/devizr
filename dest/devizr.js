@@ -12,8 +12,8 @@
  * THE SOFTWARE.
  */
 
-/*jshint browser:true, devel: true */
-/*global define:true, DocumentTouch:true, SVGFEColorMatrixElement:true */
+/*jshint browser:true */
+/*global define:true */
 
 (function(window, document, navigator) {
   "use strict";
@@ -42,9 +42,15 @@
     // console.log(modernizrFeatures.sort());
     
     
-		  
-  test = function(){};
-  tests = {
+		  /*jshint browser:true */
+  /*global DocumentTouch:true, SVGFEColorMatrixElement:true */
+  "use strict";
+  
+  var test = function(){
+  	
+  };
+  
+  var tests = {
   
     /*** 
      * # Device related APIs

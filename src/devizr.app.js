@@ -12,8 +12,8 @@
  * THE SOFTWARE.
  */
 
-/*jshint browser:true, devel: true */
-/*global define:true, DocumentTouch:true, SVGFEColorMatrixElement:true */
+/*jshint browser:true */
+/*global define:true */
 
 (function(window, document, navigator) {
   "use strict";

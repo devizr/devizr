@@ -1,6 +1,12 @@
+/*jshint browser:true */
+/*global DocumentTouch:true, SVGFEColorMatrixElement:true */
+"use strict";
 
-test = function(){};
-tests = {
+var test = function(){
+	
+};
+
+var tests = {
 
   /*** 
    * # Device related APIs
