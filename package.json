@@ -25,6 +25,9 @@
     "gulp-jasmine": "^0.2.0"
   },
   "dependencies": {
-    "gulp-jshint": "^1.5.5"
+    "gulp-concat": "^2.2.0",
+    "gulp-jshint": "^1.5.5",
+    "gulp-replace": "^0.2.0",
+    "gulp-uglify": "^0.2.1"
   }
 }
