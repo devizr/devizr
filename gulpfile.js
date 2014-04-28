@@ -26,7 +26,8 @@ gulp.task('build', function() {
       throw err;
     }
     
-    var lines_indent = [];
+    // Adding indent to all lines in test file 
+		var lines_indent = [];
     var lines = tests.split('\n');
     lines.forEach(function(line){
       lines_indent.push('  ' + line);
