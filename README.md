@@ -1,7 +1,7 @@
 Devizr
 ======
 
-> Device asset manager
+> Device asset manager and JS feature detector.
 
 
 Synopsis
