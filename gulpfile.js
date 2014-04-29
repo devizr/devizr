@@ -33,10 +33,10 @@ gulp.task('build', function() {
     var lines_indent = [];
     var lines = tests.split('\n');
     lines.forEach(function(line, index){
-			if(index > 3) {
-			  lines_indent.push('    ' + line);
-			}
-			
+      if(index > 3) {
+        lines_indent.push('    ' + line);
+      }
+      
     });
     tests = lines_indent.join('\n');
     
