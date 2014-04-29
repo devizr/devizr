@@ -28,11 +28,15 @@ gulp.task('build', function() {
       throw err;
     }
     
-    // Adding indent to all lines in test file 
+    // Removing first 4 lines  
+    // and adding indent to all other lines in test file 
     var lines_indent = [];
     var lines = tests.split('\n');
-    lines.forEach(function(line){
-      lines_indent.push('  ' + line);
+    lines.forEach(function(line, index){
+			if(index > 3) {
+			  lines_indent.push('    ' + line);
+			}
+			
     });
     tests = lines_indent.join('\n');
     

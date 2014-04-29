@@ -24,35 +24,16 @@
       stylesLoaded = false, 
       support = [],
       cache = [],
-			test, tests = {}
-      // , docElemClassName = document.documentElement.className.split(" "),  
-      // docElemClassNameExclude = ["", "js"],
-      // modernizrFeatures = [],
-			// i
-      ;
+			test, tests = {};
       
-    // if(typeof Modernizr === 'object') {
-    //   for(i = 0; i < docElemClassName.length; i++) {
-    //     if(!~docElemClassNameExclude.indexOf(docElemClassName[i]) && docElemClassName[i].substring(0, 3) !== 'no-') {
-    //       modernizrFeatures.push(docElemClassName[i]);
-    //     }
-    //   }  
-    // }
-    //     
-    // console.log(modernizrFeatures.sort());
-    
-    
-		//{{TESTS}}
-		
-		
+//{{TESTS}}
+				
     function DevizrError(message) {
       this.name = "Devizr Error";
       this.message = message || "";
     }
     DevizrError.prototype = new Error();
     DevizrError.prototype.constructor = DevizrError;
-
-    // throw new DevizrError("Invalid test - '" + iface + "' is not an interface!");
 
     function addTest(id, test_fn) {
       tests[id] = test_fn;
