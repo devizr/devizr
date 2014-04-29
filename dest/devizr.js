@@ -24,7 +24,7 @@
       stylesLoaded = false, 
       support = [],
       cache = [],
-			test, tests = {};
+      test, tests = {};
       
     test = function(){},
     tests = {
