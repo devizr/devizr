@@ -15,31 +15,29 @@ var breakpoints = [
     width: 0,
     addons: {
       mobilenavigation: {
-        script: "assets/javascripts/mobile.min.js",
-        complete: app.initMobileNavigation
+        script: "assets/mobile.min.js",
+        complete: app.initMobile
       }
     }
   },
   {
     width: 767,
     addons: {
-      animation: {
-        script: "assets/javascripts/animation.min.js",
-        style: "assets/stylesheets/animation.min.css",
+      desktop: {
+        script: "assets/desktop.min.js",
+        style: "assets/desktop.min.css",
         tests: [
-          "requestanimationframe",
           "!touch"
         ],
-        complete: app.initAnimations
+        complete: app.initDesktop
       },
-      touchanimation: {
-        script: "assets/javascripts/animation.touch.min.js",
-        style: "assets/stylesheets/animation.min.css",
+      touch: {
+        script: "assets/touch.min.js",
+        style: "assets/touch.min.css",
         tests: [
-          "requestanimationframe",
           "touch"
         ],
-        complete: app.initAnimations
+        complete: app.initTouch
       }
     }
   }
