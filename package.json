@@ -1,7 +1,7 @@
 {
   "name": "devizr",
-  "version": "0.5.0",
-  "description": "Device asset manager and JS feature detector",
+  "version": "0.5.1",
+  "description": "Device asset manager",
   "main": "devizr.js",
   "scripts": {
     "test": "jasmine-node test.js"

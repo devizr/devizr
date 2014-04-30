@@ -26,7 +26,6 @@
       cache = [],
       test, tests = {};
       
-    test = function(){},
     tests = {
     
       /*** 
@@ -234,19 +233,6 @@
       */
       'connection': function() {
         return test(navigator, 'connection');
-      },
-    
-      /*** 
-       * ## lowbandwidth
-       * From modernizr
-       * > ?
-      */
-      'lowbandwidth': function() {
-        var connection = (test(navigator, 'connection') && 
-          navigator.connection) || { type: 0 }; 
-        return connection.type == 3 || // connection.CELL_2G
-          connection.type == 4 || // connection.CELL_3G
-          /^[23]g$/.test(connection.type); // string value in new spec
       },
     
       /*** 
@@ -649,18 +635,73 @@
     
       /***
        * ## document.currentScript
-       * Returns the <script> element whose script is currently being processed.
+       * Returns the script-element whose script is currently being processed.
        * > Chrome 29, Firefox 4, Opera 16, IE ?
-       */
+      */
       'currentscript': function() {
         return test(document, 'currentScript') && 
           test(document, 'onbeforescriptexecute') && 
           test(document, 'onafterscriptexecute');
-      }
+      },
+      
+      
+      /*** 
+       * # Environment detection
+       * **Experimental** (environment detection has a high rate of misuse).
+      */
+      
+      /***
+       * ## Is mobile device (smartphone)
+       * EXPERIMENTAL!
+       * > ?
+      */
+      'is_mobile': function() {
+        return (test('android') && test('mobile')) || 
+          (test('blackberry') && test('mobile')) ||
+          (test('firefox') && test('fennec')) ||
+          (test('windows') && test('phone')) ||
+          (test('opera') && test('presto')) ||
+          (test('netfront') && !test('kindle')) ||
+          test('iphone|ipod|meego|webos|iemobile') || 
+          test('symbianos|doris|dorothy|gobrowser|maemo|minimo') || 
+          test('semc-browser|skyfire|teashark|teleca|uzardweb');
+      },
+      
+      /***
+       * ## Is tablet device
+       * EXPERIMENTAL!
+       * > ?
+      */
+      'is_tablet': function() {
+        return (!test('is_mobile') && devizr.supports('touch')) ||
+          test('tablet|kindle|silk|ipad');  
+      },
     
+      /***
+       * ## Is desktop device
+       * EXPERIMENTAL!
+       * > ?
+      */
+      'is_desktop': function() {
+        return !devizr.supports('is_mobile') && !devizr.supports('is_tablet');  
+      },
+    
+      /*** 
+       * ## Is slow connection
+       * From modernizr 'lowbandwidth'
+       * > Firefox 12, ..
+      */
+      'is_slowconnection': function() {
+        var connection = (test(navigator, 'connection') && 
+          navigator.connection) || { type: 0 }; 
+        return connection.type == 3 || // connection.CELL_2G
+          connection.type == 4 || // connection.CELL_3G
+          /^[23]g$/.test(connection.type); // string value in new spec
+      }
+      
     };
     
-				
+        
     function DevizrError(message) {
       this.name = "Devizr Error";
       this.message = message || "";
@@ -701,26 +742,35 @@
       }
 
       test = function(iface, prop, prefixed){
-    
-        var i, prefixedProp, result = false;
-    
-        iface = getIframeInterfaces(iface);
+        
+        var i, prefixedProp, result = false,
+				    re, useragent = window.navigator.userAgent.toLowerCase();
 
-        if(prefixed) {
-          for(i = 0; i < prefixes.length; i++) {
-            prefixedProp = prefixes[i] + capitaliseFirstLetter(prop);
-            if( prefixedProp in iface) {
-              result = true;
-            }
-          }    
-        }
+        if(arguments.length === 1) {
+
+			    re = new RegExp(arguments[0], 'i');
+			    return re.test(useragent);
+        
+        } else {
+        
+          iface = getIframeInterfaces(iface);
+
+          if(prefixed) {
+            for(i = 0; i < prefixes.length; i++) {
+              prefixedProp = prefixes[i] + capitaliseFirstLetter(prop);
+              if( prefixedProp in iface) {
+                result = true;
+              }
+            }    
+          }
     
-        if(prop in iface) {
-          result = true;
-        }
+          if(prop in iface) {
+            result = true;
+          }
     
-        return result;
-      
+          return result;
+        }
+              
       };
 
       for(var name in tests) {

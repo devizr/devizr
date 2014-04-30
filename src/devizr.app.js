@@ -27,7 +27,7 @@
       test, tests = {};
       
 //{{TESTS}}
-				
+        
     function DevizrError(message) {
       this.name = "Devizr Error";
       this.message = message || "";
@@ -68,26 +68,35 @@
       }
 
       test = function(iface, prop, prefixed){
-    
-        var i, prefixedProp, result = false;
-    
-        iface = getIframeInterfaces(iface);
+        
+        var i, prefixedProp, result = false,
+				    re, useragent = window.navigator.userAgent.toLowerCase();
 
-        if(prefixed) {
-          for(i = 0; i < prefixes.length; i++) {
-            prefixedProp = prefixes[i] + capitaliseFirstLetter(prop);
-            if( prefixedProp in iface) {
-              result = true;
-            }
-          }    
-        }
+        if(arguments.length === 1) {
+
+			    re = new RegExp(arguments[0], 'i');
+			    return re.test(useragent);
+        
+        } else {
+        
+          iface = getIframeInterfaces(iface);
+
+          if(prefixed) {
+            for(i = 0; i < prefixes.length; i++) {
+              prefixedProp = prefixes[i] + capitaliseFirstLetter(prop);
+              if( prefixedProp in iface) {
+                result = true;
+              }
+            }    
+          }
     
-        if(prop in iface) {
-          result = true;
-        }
+          if(prop in iface) {
+            result = true;
+          }
     
-        return result;
-      
+          return result;
+        }
+              
       };
 
       for(var name in tests) {

@@ -47,6 +47,6 @@ var breakpoints = [
 ### Usage 
    
 ```js
-devizr.init;
+devizr.init();
 devizr.load(breakpoints);
 ```
