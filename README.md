@@ -3,9 +3,9 @@ Devizr
 
 > Device asset manager
 
-* Device width detection
-* JS feature detection
-* Environment detection (experimental!)
+*Device width detection
+*JS feature detection
+*Environment detection (experimental!)
 
 
 Synopsis
