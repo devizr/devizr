@@ -1,7 +1,11 @@
 Devizr
 ======
 
-> Device asset manager and JS feature detector.
+> Device asset manager
+
+* Device width detection
+* JS feature detection
+* Environment detection (experimental!)
 
 
 Synopsis
