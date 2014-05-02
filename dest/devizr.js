@@ -1,5 +1,5 @@
 /*!
- * devizr 0.5.0
+ * devizr 0.5.1
  * Device asset manager and JS feature detector
  * Copyright (c) 2013, 2014 Uli Preuss
  *
@@ -23,6 +23,7 @@
     var viewport = { width: window.innerWidth, height: window.innerHeight },
       stylesLoaded = false, 
       support = [],
+			env = [],
       cache = [],
       test, tests = {};
       
@@ -32,31 +33,6 @@
        * # Device related APIs
        * ...
       */
-    
-      /*** 
-       * ## Detect Retina Display
-       * ...  
-       * ##### __Example__
-       * ```javascript
-       * if(window.devicePixelRatio >= 1.2){
-       *   var images = document.getElementsByTagName('img');
-       *   for(var i=0;i < images.length;i++){
-       *     var attr = images[i].getAttribute('data-2x');
-       *     if(attr){
-       *       images[i].src = attr;
-       *     }
-       *   }
-       * }
-       * ```
-       * > ?
-      */
-      'retina': function() {
-        return window.devicePixelRatio > 1 || 
-          (window.matchMedia && window.matchMedia(
-            "(-webkit-min-device-pixel-ratio: 1.5)," + 
-            "(-moz-min-device-pixel-ratio: 1.5)," + 
-            "(min-device-pixel-ratio: 1.5)").matches);
-      },
     
       /*** 
        * ## Full Screen API
@@ -268,16 +244,8 @@
        * > ?
       */
       'xhr2': function() {
-        return test(window, 'FormData');
-      },
-    
-      /*** 
-       * ## xhrupload
-       * ...
-       * > ?
-      */
-      'xhrupload': function() {
-        return test(window, 'XMLHttpRequestUpload');
+        return test(window, 'FormData') && 
+          test(window, 'XMLHttpRequestUpload');
       },
     
       /*** 
@@ -289,17 +257,6 @@
         return test(window, "XMLHttpRequest") && 
           'withCredentials' in new XMLHttpRequest();
       },
-    
-      /*** 
-       * ## Web Intents
-       * Discovery mechanism and a limited to the essentials RPC system
-       * last updated 2012 ????
-       * > ?
-      */
-      'webintents': function() {
-        return test(navigator, 'startActivity');
-      },
-    
     
       /*** 
        * # Data related APIs
@@ -324,14 +281,6 @@
         return test(document.documentElement, 'dataset');
       },
     
-      /*** 
-       * ## formdata
-       * ...
-       * > ?
-      */
-      'formdata': function() {
-        return test(window, 'FormData');
-      },
     
       /*** 
        * ## filereader
@@ -367,22 +316,14 @@
       },
     
       /*** 
-       * ## localstorage
+       * ## namevalue-storage
        * ...
        * > ?
       */
-      'localstorage': function() {
-        return test(window, 'localStorage');
+      'namevaluestorage': function() {
+        return test(window, 'localStorage') && test(window, 'sessionStorage');
       },
     
-      /*** 
-       * ## sessionstorage
-       * ...
-       * > ?
-      */
-      'sessionstorage': function() {
-        return test(window, 'sessionStorage');
-      },
     
       /*** 
        * ## websqldatabase
@@ -596,8 +537,29 @@
        * ...
        * > ?
       */
-      'performance': function() {
+      'performanceapi': function() {
         return test(window, 'performance', true);
+      },
+    
+      /*** 
+       * ## High Resolution Time
+       * ...
+       * > ?
+      */
+      'highresolutiontime': function() {
+        return test(window, 'performance', true) && 
+          typeof window.performance.now === 'function';
+      },
+    
+      /*** 
+       * ## High Resolution Time
+       * ...
+       * > ?
+      */
+      'usertiming': function() {
+        return test(window, 'performance', true) && 
+          typeof window.performance.now === 'function' && 
+          typeof window.performance.mark === 'function' ;
       },
     
       /*** 
@@ -655,7 +617,7 @@
        * EXPERIMENTAL!
        * > ?
       */
-      'is_mobile': function() {
+      'MOBILE': function() {
         return (test('android') && test('mobile')) || 
           (test('blackberry') && test('mobile')) ||
           (test('firefox') && test('fennec')) ||
@@ -672,8 +634,8 @@
        * EXPERIMENTAL!
        * > ?
       */
-      'is_tablet': function() {
-        return (!test('is_mobile') && devizr.supports('touch')) ||
+      'TABLET': function() {
+        return (!test('MOBILE') && devizr.supports('touch')) ||
           test('tablet|kindle|silk|ipad');  
       },
     
@@ -682,21 +644,47 @@
        * EXPERIMENTAL!
        * > ?
       */
-      'is_desktop': function() {
-        return !devizr.supports('is_mobile') && !devizr.supports('is_tablet');  
+      'DESKTOP': function() {
+        return !test('MOBILE') && !test('TABLET');  
       },
     
       /*** 
        * ## Is slow connection
-       * From modernizr 'lowbandwidth'
+       * Network connection feature detection referenced from Modernizr
+       * Copyright (c) Faruk Ates, Paul Irish, Alex Sexton
        * > Firefox 12, ..
       */
-      'is_slowconnection': function() {
+      'SLOWCONNECTION': function() {
         var connection = (test(navigator, 'connection') && 
           navigator.connection) || { type: 0 }; 
         return connection.type == 3 || // connection.CELL_2G
           connection.type == 4 || // connection.CELL_3G
           /^[23]g$/.test(connection.type); // string value in new spec
+      },
+      
+      /*** 
+       * ## Detect Retina Display
+       * ...  
+       * ##### __Example__
+       * ```javascript
+       * if(window.devicePixelRatio >= 1.2){
+       *   var images = document.getElementsByTagName('img');
+       *   for(var i=0;i < images.length;i++){
+       *     var attr = images[i].getAttribute('data-2x');
+       *     if(attr){
+       *       images[i].src = attr;
+       *     }
+       *   }
+       * }
+       * ```
+       * > ?
+      */
+      'RETINA': function() {
+        return window.devicePixelRatio > 1 || 
+          (window.matchMedia && window.matchMedia(
+            "(-webkit-min-device-pixel-ratio: 1.5)," + 
+            "(-moz-min-device-pixel-ratio: 1.5)," + 
+            "(min-device-pixel-ratio: 1.5)").matches);
       }
       
     };
@@ -722,9 +710,6 @@
       iframe.width = '1';
       iframe.height = '1';
       iframe.style.visibility = 'hidden'; 
-      iframe.onload = function(){
-        body.removeChild(iframe);
-      };
       body.appendChild(iframe);
   
       function capitaliseFirstLetter(string) {
@@ -748,7 +733,7 @@
 
         if(arguments.length === 1) {
 
-			    re = new RegExp(arguments[0], 'i');
+					re = new RegExp(arguments[0], 'i');
 			    return re.test(useragent);
         
         } else {
@@ -776,13 +761,21 @@
       for(var name in tests) {
         if(typeof tests[name] === 'function') {
           if(tests[name]()) {
-            support.push(name);  
+						if(name === name.toUpperCase()) {
+	            env.push(name);				
+						} else {
+	            support.push(name);				
+						}
           }
         }
         else {
           throw new DevizrError("Invalid test - '" + name + "' is not a function!");
         }
       }
+
+      iframe.onload = function(){
+        body.removeChild(iframe);
+      };
 
     }
    
@@ -925,6 +918,7 @@
       version: '##VERSION##',
       load : preCheck,
       support: support,
+			env: env,
       supports: supports,
       tests: tests,
       cache : cache,

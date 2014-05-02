@@ -41,7 +41,7 @@ gulp.task('build', function() {
     tests = lines_indent.join('\n');
     
     return gulp.src('./src/devizr.app.js')
-      .pipe(replace(/\/\/{{TESTS}}/i, tests))
+      .pipe(replace(/\/\/{{DEVIZR-TESTS}}/i, tests))
       .pipe(replace(/##VERSION##/i, pkg.version))
       .pipe(replace(/##YEAR##/i, new Date().getFullYear()))
       .pipe(concat('devizr.js'))

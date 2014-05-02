@@ -23,10 +23,11 @@
     var viewport = { width: window.innerWidth, height: window.innerHeight },
       stylesLoaded = false, 
       support = [],
+			env = [],
       cache = [],
       test, tests = {};
       
-//{{TESTS}}
+//{{DEVIZR-TESTS}}
         
     function DevizrError(message) {
       this.name = "Devizr Error";
@@ -48,9 +49,6 @@
       iframe.width = '1';
       iframe.height = '1';
       iframe.style.visibility = 'hidden'; 
-      iframe.onload = function(){
-        body.removeChild(iframe);
-      };
       body.appendChild(iframe);
   
       function capitaliseFirstLetter(string) {
@@ -74,7 +72,7 @@
 
         if(arguments.length === 1) {
 
-			    re = new RegExp(arguments[0], 'i');
+					re = new RegExp(arguments[0], 'i');
 			    return re.test(useragent);
         
         } else {
@@ -102,13 +100,21 @@
       for(var name in tests) {
         if(typeof tests[name] === 'function') {
           if(tests[name]()) {
-            support.push(name);  
+						if(name === name.toUpperCase()) {
+	            env.push(name);				
+						} else {
+	            support.push(name);				
+						}
           }
         }
         else {
           throw new DevizrError("Invalid test - '" + name + "' is not a function!");
         }
       }
+
+      iframe.onload = function(){
+        body.removeChild(iframe);
+      };
 
     }
    
@@ -251,6 +257,7 @@
       version: '##VERSION##',
       load : preCheck,
       support: support,
+			env: env,
       supports: supports,
       tests: tests,
       cache : cache,
