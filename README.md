@@ -3,7 +3,7 @@ Devizr
 
 > Device asset manager
 
-Different assets for different requirements.
+A simple approach to architecture: different assets for different requirements.
 
 ### Methods of Detection
 - **Device width detection** (Feature-Dependent Assets/Responsive Assets)
