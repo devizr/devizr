@@ -13,10 +13,9 @@ Devizr
 
 Can be combined.
 
-Synopsis
---------
+### Synopsis
 
-### Configuration
+#### Configuration
 
 ```js
 var breakpoints = [
@@ -53,9 +52,17 @@ var breakpoints = [
 ];
 ```
 
-### Usage 
+#### Usage 
    
 ```js
+// init detection
 devizr.init();
-devizr.load(breakpoints);
+
+// add new Test
+devizr.addTest('contact-page', function(){
+  return location.hash === '#contact';
+});
+
+// get supported features as an array
+console.log(devizr.support);
 ```
