@@ -52,22 +52,32 @@ var breakpoints = [
 ];
 ```
 
-#### Usage 
-   
-```js
-// Start detection
-devizr.init();
+#### Methods and Properties
 
-// Add new test
+##### init()
+Start detection
+```js
+devizr.init();
+```
+
+##### addTest()
+Add new test
+```js
 devizr.addTest('contact-page', function(){
   return location.hash === '#contact';
 });
+```
 
-// Get feature (for inline usage)
+##### supports()
+Get feature (for inline usage)
+```js
 if(devizr.supports('touch')) {
   console.log('Hi from touch device!');
 }
+```
 
-// Get supported features as an array
+##### support
+Get supported features as an array
+```js
 console.log(devizr.support);
 ```
