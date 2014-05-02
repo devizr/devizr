@@ -15,8 +15,8 @@ Devizr
 
 - Simple configuration
 - Detection methods can be combined.
-- Features detection with all prefixes.
-- Task runner helper (for __grunt__, __gulp__, __broccoli__, ..) via npm ```install node-devizr``` (see [node-devizr](https://github.com/up/node-devizr)) 
+- Features detection with (all) prefixes.
+- Task runner helper (for _grunt_, _gulp_, _broccoli_, ..) via npm ```install node-devizr``` (see [node-devizr](https://github.com/up/node-devizr)) 
 
 ### Synopsis
 
