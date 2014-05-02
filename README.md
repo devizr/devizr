@@ -63,6 +63,11 @@ devizr.addTest('contact-page', function(){
   return location.hash === '#contact';
 });
 
+// add new Test
+if(devizr.supports('touch')) {
+  console.log('Hi from touch device!');
+}
+
 // get supported features as an array
 console.log(devizr.support);
 ```
