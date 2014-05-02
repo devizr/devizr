@@ -1,9 +1,9 @@
 Devizr
 ======
 
-> Device asset manager
+> Device asset manager (.. and yet another frontend architecture approach)
 
-A simple frontend architecture approach: different assets for different requirements.
+## Different assets for different requirements.
 
 ### Methods of Detection
 - **Device width detection** (Feature-Dependent Assets/Responsive Assets)
