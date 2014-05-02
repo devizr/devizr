@@ -13,6 +13,10 @@ Devizr
 
 Can be combined.
 
+#### Details
+
+- Features detection with all prefixes
+
 ### Synopsis
 
 #### Configuration
