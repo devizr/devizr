@@ -11,11 +11,10 @@ Devizr
 - **Url fragment detection** (Routing-Dependent Assets - EXPERIMENTAL!)
 - **Environment detection** (Environment-Dependent Assets - EXPERIMENTAL!)
 
-Can be combined.
-
 #### Details
 
-- Features detection with all prefixes
+- Detection methods can be combined.
+- Features detection with all prefixes.
 
 ### Synopsis
 
