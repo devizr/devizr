@@ -6,10 +6,10 @@ Devizr
 Different assets for different requirements.
 
 ### Methods of Detection
-- Device width detection (Feature-Dependent Assets/Responsive Assets)
-- JS feature detection (Feature-Dependent Assets)
-- Url fragment detection (Routing-Dependent Assets - EXPERIMENTAL!)
-- Environment detection (Environment-Dependent Assets - EXPERIMENTAL!)
+- **Device width detection** (Feature-Dependent Assets/Responsive Assets)
+- **JS feature detection** (Feature-Dependent Assets)
+- **Url fragment detection** (Routing-Dependent Assets - EXPERIMENTAL!)
+- **Environment detection** (Environment-Dependent Assets - EXPERIMENTAL!)
 
 Can be combined.
 
