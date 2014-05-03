@@ -20,7 +20,81 @@ Devizr
 
 ### Synopsis
 
+#### Methods and Properties
+
+##### init()
+Start detection
+```js
+devizr.init();
+```
+
+##### load()
+Load breakpoint array
+```js
+devizr.load(BREAKPOINT_ARRAY);
+```
+
+##### addTest()
+Add new test 
+```js
+devizr.addTest(ID, function(){
+  return CONDITION;
+});
+```
+
+##### supports()
+Get feature (for inline usage)
+```js
+if(devizr.supports(FEATURE)) {
+  // Do somthing ..
+}
+```
+
+##### support
+Get supported features as an array
+```js
+console.log(devizr.support);
+```
+
 #### Configuration
+
+```
+var BREAKPOINT_ARRAY_NAME = [
+  {
+    width: NUMBER,
+    addons: {
+      ID: {
+        script: SCRIPT_URL_STRING,
+        complete: CALLBACK_FUNCTION
+      }
+    }
+  },
+  {
+    width: NUMBER,
+    addons: {
+      ANOTHER_ID: {
+        script: SCRIPT_URL_STRING,
+        style: STYLE_URL_STRING,
+        tests: [
+          FEATURE_NAME_STRING
+        ],
+        complete: CALLBACK_FUNCTION
+      },
+      STILL_ANOTHER_ID: {
+        script: SCRIPT_URL_STRING,
+        style: STYLE_URL_STRING,
+        tests: [
+          FEATURE_NAME_STRING, 
+					ANOTHER_FEATURE_NAME_STRING 
+        ],
+        complete: CALLBACK_FUNCTION
+      }
+    }
+  }
+];
+```
+
+### Examples
 
 ```js
 var breakpoints = [
@@ -57,32 +131,22 @@ var breakpoints = [
 ];
 ```
 
-#### Methods and Properties
-
-##### init()
-Start detection
-```js
-devizr.init();
-```
-
-##### addTest()
-Add new test
 ```js
 devizr.addTest('contact-page', function(){
   return location.hash === '#contact';
 });
 ```
 
-##### supports()
-Get feature (for inline usage)
+```js
+devizr.init();
+```
+
 ```js
 if(devizr.supports('touch')) {
   console.log('Hi from touch device!');
 }
 ```
 
-##### support
-Get supported features as an array
 ```js
 console.log(devizr.support);
 ```
