@@ -1,7 +1,7 @@
 Devizr
 ======
 
-> **Device asset manager** (.. and yet another frontend architecture approach)
+> **Device asset manager** (and maybe a frontend architecture approach)
 
 ## Different assets for different requirements.
 
