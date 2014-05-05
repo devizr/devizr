@@ -96,6 +96,7 @@ var BREAKPOINT_ARRAY_NAME = [
 
 ### Examples
 
+#### Setup /configuration
 ```js
 var breakpoints = [
   {
