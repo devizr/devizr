@@ -3,7 +3,7 @@ Devizr
 
 > **Device asset manager**
 
-## <small>A Front-end architecture approach:</small><br/>Loading optimized assets for different devices
+## <b style="font-size:0.5em">A Front-end architecture approach:</b><br/>Loading optimized assets for different devices
 
 ### Methods of Detection
 - **Device width detection** (Feature-Dependent Assets/Responsive Assets)
