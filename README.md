@@ -1,6 +1,12 @@
 Devizr
 ======
 
+<style>
+h2 {
+	margin-top: 0px;
+}
+</style>
+
 > **Device asset manager**
 
 #### A Front-end architecture approach:
