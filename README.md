@@ -3,7 +3,7 @@ Devizr
 
 > **Device asset manager**
 
-## Loading optimized assets for different devices
+## Loading different assets for different devices
 
 ### Methods of Detection
 - **Device width detection** (Feature-Dependent Assets/Responsive Assets)
