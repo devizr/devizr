@@ -1,7 +1,7 @@
 /*!
- * devizr ##VERSION##
+ * devizr {{VERSION}}
  * Device asset manager and JS feature detector
- * Copyright (c) 2013, ##YEAR## Uli Preuss
+ * Copyright (c) 2013, {{YEAR}} Uli Preuss
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -254,7 +254,7 @@
     }
   
     return {
-      version: '##VERSION##',
+      version: '{{VERSION}}',
       load : preCheck,
       support: support,
 			env: env,

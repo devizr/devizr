@@ -1,0 +1,415 @@
+{
+  "fullscreen": {
+    "title": "Full Screen API",
+    "description": "API for allowing content (like a video or canvas element) to take up the entire screen.",
+    "status": "Working Draft",
+    "support": "IE 11*, Firefox 10*, Chrome 15*, Safari 6*, Opera 15*, Blackberry Browser 10, Opera Mobile 0*, Chrome for Android 0*, Firefox for Android 0*",
+    "source": "caniuse.com"
+  },
+  "ambientlight": {
+    "title": "Ambient Light Events",
+    "description": "Make a web page or an application aware of any change in the light intensity.",
+    "status": "Working Draft",
+    "support": "Firefox 22 (Mac OSX) only, Firefox Mobile 15",
+    "source": "MDN Using_Light_Events"
+  },
+  "battery": {
+    "title": "Battery Status API",
+    "description": "Method to provide information about the battery status of the hosting device.",
+    "status": "Candidate Recommendation",
+    "support": "Firefox 16",
+    "source": "caniuse.com"
+  },
+  "geolocation": {
+    "title": "Geolocation",
+    "description": "Method of informing a website of the user's geographical location",
+    "status": "Candidate Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "pointerlock": {
+    "title": "Pointer Lock API",
+    "description": "Provides input methods based on the movement of the mouse over time (i.e., deltas), not just the absolute position of the mouse cursor.",
+    "status": "Working Draft",
+    "support": "Chrome 23, Firefox 14",
+    "source": "MDN Pointer_Lock"
+  },
+  "userproximity": {
+    "title": "Proximity API",
+    "description": "The proximity events are a handy way to know when a user is close to a device. These events make it possible to react to such a change, for example by shutting down the screen of a smartphone when the user is having a phone call with the device close to their ear.",
+    "status": "Candidate Recommendation",
+    "support": "Firefox ?, Firefox Mobile 15",
+    "source": "MDN Proximity_Events"
+  },
+  "devicemotion": {
+    "title": "Device Motion API",
+    "description": "Fired when fresh data is available from an orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.",
+    "status": "",
+    "support": "Firefox 3.6, Chrome 7, Opera Mobile 12, Safari Mobile 4.2",
+    "source": "MDN DeviceMotionEvent"
+  },
+  "deviceorientation": {
+    "title": "DeviceOrientation events",
+    "description": "API for detecting orientation and motion events from the device running the browser.",
+    "status": "Working Draft",
+    "support": "IE 11, Firefox 4, Chrome 7, Opera 15, iOS Safari 4.2-4.3, Android Browser 3, Blackberry Browser 10",
+    "source": "caniuse.com"
+  },
+  "orientationchange": {
+    "title": "Screen Orientation API",
+    "description": "Give the current orientation of the screen (landscape, portrait)",
+    "status": "Working Draft",
+    "support": "Firefox for Android, IE 11, Firefox Mobile ?",
+    "source": "MDN XXXXX "
+  },
+  "vibrate": {
+    "title": "Vibration API",
+    "description": "Method to access the vibration mechanism of the hosting device.",
+    "status": "Working Draft",
+    "support": "Firefox 11*, Chrome 30, Opera 17, Android Browser 4.4, Blackberry Browser 10",
+    "source": "caniuse.com"
+  },
+  "gamepads": {
+    "title": "Navigator.getGamepads",
+    "description": "Returns an array of Gamepad objects, one for each gamepad connected to the device.",
+    "status": "Working Draft",
+    "support": "Chrome 21, Firefox 24, ",
+    "source": "MDN XXXXX "
+  },
+  "donottrack": {
+    "title": "Navigator.donottrack",
+    "description": "Returns the user's do-not-track setting. This is 'yes' if the user has requested not to be tracked by web sites, content, or advertising.",
+    "status": "Working Draft",
+    "support": "Chrome ?, Firefox 9, IE 9, Opera 12, Safari 5.1 (on OS X 10.7), Firefox Mobile 9",
+    "source": "MDN XXXXX "
+  },
+  "getusermedia": {
+    "title": "getUserMedia/Stream API",
+    "description": "Method of accessing external device data (such as a webcam video stream). Formerly this was envisioned as the &lt;device> element.",
+    "status": "Working Draft",
+    "support": "Firefox 17*, Chrome 21*, Opera 12, Blackberry Browser 10*, Opera Mobile 0*, Firefox for Android 0*",
+    "source": "caniuse.com"
+  },
+  "contextmenu": {
+    "title": "Toolbar/context menu",
+    "description": "Method of defining a toolbar menu, a context menu or a list of (interactive) options using the &lt;menu> element.",
+    "status": "Candidate Recommendation",
+    "support": "Firefox 8",
+    "source": "caniuse.com"
+  },
+  "online": {
+    "title": "Navigator.onLine",
+    "description": "Returns the online status of the browser.",
+    "status": "Working draft",
+    "support": "Chrome ?, Firefox ?, IE 8*, Safari 5.0.4, Android Browser 2.2",
+    "source": "MDN XXXXX "
+  },
+  "onlineevents": {
+    "title": "Online/Offline events",
+    "description": "Fired on the body-element of each page when the browser switches between online and offline mode.",
+    "status": "",
+    "support": "Firefox 3, ??",
+    "source": "MDN XXXXX "
+  },
+  "eventsource": {
+    "title": "Server-sent DOM events",
+    "description": "Method of continuously sending data from a server to the browser, rather than repeatedly requesting it (EventSource interface, used to fall under HTML5)",
+    "status": "Candidate Recommendation",
+    "support": "Firefox 6, Chrome 6, Safari 5, Opera 9, iOS Safari 4.0-4.1, Android Browser 4.4, Blackberry Browser 7",
+    "source": "caniuse.com"
+  },
+  "applicationcache": {
+    "title": "Offline web applications",
+    "description": "Method of defining web page files to be cached using a cache manifest file, allowing them to work offline on subsequent visits to the page",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "connection": {
+    "title": "Network Information API",
+    "description": "Represents a Connection containing information about the system's connection, such as the current bandwidth of the user's device or whether the connection is metered.",
+    "status": "Working Draft",
+    "support": "Firefox 12, Firefox Mobile 12, Android Browser 2.2, Firefox OS 1.5",
+    "source": "MDN XXXXX "
+  },
+  "notification": {
+    "title": "Web Notifications",
+    "description": "Method of alerting the user outside of a web page by displaying notifications (that do not require interaction by the user).",
+    "status": "Working Draft",
+    "support": "Firefox 22, Chrome 5*, Safari 6, Android Browser 4.4*, Blackberry Browser 10, Opera Mobile 0*",
+    "source": "caniuse.com"
+  },
+  "postmessage": {
+    "title": "Cross-document messaging",
+    "description": "Method of sending information from a page on one domain to a page on a different one (using postMessage)",
+    "status": "Working Draft",
+    "support": "IE 8, Firefox 3, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "websocket": {
+    "title": "Web Sockets",
+    "description": "Bidirectional communication technology for web apps",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Firefox 4, Chrome 4, Safari 5, Opera 11, iOS Safari 4.2-4.3, Android Browser 4.4, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "xhr2": {
+    "title": "XMLHttpRequest 2",
+    "description": "Adds more functionality to AJAX requests like file uploads, transfer progress information and the ability to send form data.",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 4, Chrome 7, Safari 5, Opera 12, iOS Safari 5.0-5.1, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "cors": {
+    "title": "Cross-Origin Resource Sharing",
+    "description": "Method of performing XMLHttpRequests across domains",
+    "status": "Recommendation",
+    "support": "IE 8, Firefox 4, Chrome 4, Safari 4, Opera 12, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "blobconstructor": {
+    "title": "Blob constructing",
+    "description": "Construct Blobs (binary large objects) either using the BlobBuilder API (deprecated) or the Blob constructor.",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 6*, Chrome 8*, Safari 6, Opera 15, iOS Safari 6.0-6.1, Android Browser 3*, Blackberry Browser 10, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "dataset": {
+    "title": "dataset & data-* attributes",
+    "description": "Method of applying and accessing custom data to elements.",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "filereader": {
+    "title": "FileReader API",
+    "description": "Method of reading the contents of a File or Blob object into memory",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 4, Chrome 6, Safari 6, Opera 12, iOS Safari 6.0-6.1, Android Browser 3, Blackberry Browser 10, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "fileapi": {
+    "title": "File API",
+    "description": "Method of manipulating file objects in web applications client-side, as well as programmatically selecting them and accessing their data.",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 4, Chrome 6, Safari 6, Opera 12, iOS Safari 6.0-6.1, Android Browser 3, Blackberry Browser 7",
+    "source": "caniuse.com"
+  },
+  "json": {
+    "title": "JSON parsing",
+    "description": "Method of converting JavaScript objects to JSON strings and JSON back to objects using JSON.stringify() and JSON.parse()",
+    "status": "Other",
+    "support": "IE 8, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 4.0-4.1, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "namevaluestorage": {
+    "title": "Web Storage - name/value pairs",
+    "description": "Method of storing data locally like cookies, but for larger amounts of data (sessionStorage and localStorage, used to fall under HTML5).",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "websqldatabase": {
+    "title": "Web SQL Database",
+    "description": "Method of storing data client-side, allows Sqlite database queries for access and manipulation",
+    "status": "Unofficial / Note",
+    "support": "Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7",
+    "source": "caniuse.com"
+  },
+  "indexeddb": {
+    "title": "IndexedDB",
+    "description": "Method of storing data client-side, allows indexed database queries. Previously known as WebSimpleDB API.",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Firefox 4*, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "hashchange": {
+    "title": "Hashchange event",
+    "description": "Event triggered in JavaScript when the URL's hash has changed (for example: page.html#foo to page.html#bar) ",
+    "status": "Candidate Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 4.0-4.1, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "pagevisibility": {
+    "title": "Page Visibility",
+    "description": "JavaScript API for determining whether a document is visible on the display",
+    "status": "Recommendation",
+    "support": "IE 10, Firefox 10*, Chrome 14*, Safari 7, Opera 15*, iOS Safari 7.0, Android Browser 4.4*, Blackberry Browser 10*, Opera Mobile 0*, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "touch": {
+    "title": "Touch events",
+    "description": "Method of registering when, where and how the interface is touched, for devices with a touch screen. These DOM events are similar to mousedown, mousemove, etc.",
+    "status": "Recommendation",
+    "support": "IE 10, Firefox 4, Chrome 22, Opera 15, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "contenteditable": {
+    "title": "contenteditable attribute (basic support)",
+    "description": "Method of making any HTML element editable",
+    "status": "Candidate Recommendation",
+    "support": "IE 6, Firefox 3, Chrome 4, Safari 4, Opera 9, iOS Safari 5.0-5.1, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "draganddrop": {
+    "title": "Drag and Drop",
+    "description": "Method of easily dragging and dropping elements on a page, requiring minimal JavaScript.",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, Opera Mobile 10, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "mutationobserver": {
+    "title": "Mutation Observer",
+    "description": "Method for observing and reacting to changes to the DOM. Replaces MutationEvents, which is deprecated.",
+    "status": "Working Draft",
+    "support": "IE 9, Firefox 14, Chrome 18*, Safari 6*, Opera 15, iOS Safari 6.0-6.1*, Android Browser 4, Blackberry Browser 10*, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "treewalker": {
+    "title": "TreeWalker interface",
+    "description": "Represents the nodes of a document subtree and a position within them.",
+    "status": "Recommendation",
+    "support": "Chrome 1, Firefox 2, IE 9, Opera 9, Safari 3, Android Browser ?, Firefox Mobile 1, IE Mobile ?, Opera Mobile 9, Safari Mobile 3",
+    "source": "MDN XXXXX "
+  },
+  "nodeiterator": {
+    "title": "NodeIterator interface",
+    "description": "Represents an iterator over the members of a list of the nodes in a subtree of the DOM. The nodes will be returned in document order.",
+    "status": "Recommendation",
+    "support": "Chrome 1, Firefox 3.5, IE 9, Opera 9, Safari 3, Android Browser ?, Firefox Mobile 1, IE Mobile ?, Opera Mobile 9, Safari Mobile 3",
+    "source": "MDN XXXXX "
+  },
+  "range": {
+    "title": "Range interface",
+    "description": "Represents a fragment of a document that can contain nodes and parts of text nodes in a given document",
+    "status": "Recommendation",
+    "support": "Range() constructor: Chrome ?, Firefox 24, Opera 15, Safari ?, Android Browser ?, Firefox Mobile 1, IE Mobile 9, Opera Mobile 9, Safari Mobile ?",
+    "source": "MDN XXXXX "
+  },
+  "matchmedia": {
+    "title": "matchMedia",
+    "description": "API for finding out whether or not a media query applies to the document.",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 6, Chrome 9, Safari 6, Opera 15, iOS Safari 5.0-5.1, Android Browser 3, Blackberry Browser 10, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "webgl": {
+    "title": "WebGL - 3D Canvas graphics",
+    "description": "Method of generating dynamic 3D graphics using JavaScript, accelerated through hardware",
+    "status": "Other",
+    "support": "IE 6, Firefox 4, Chrome 8, Safari 6, Opera 12, Blackberry Browser 10, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "svg": {
+    "title": "SVG (basic support)",
+    "description": "Method of displaying basic Vector Graphics features using the embed or object elements. Refers to the SVG 1.1 spec.",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "svgfilters": {
+    "title": "SVG filters",
+    "description": "Method of using photoshop-like effects on SVG objects including blurring and color manipulation.",
+    "status": "Recommendation",
+    "support": "IE 10, Firefox 3, Chrome 5, Safari 6, Opera 9, iOS Safari 6.0-6.1, Opera Mini 5.0-7.0, Android Browser 4.4, Blackberry Browser 10, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "webaudio": {
+    "title": "Web Audio API",
+    "description": "High-level JavaScript API for processing and synthesizing audio",
+    "status": "Working Draft",
+    "support": "Firefox 25, Chrome 10*, Safari 6*, Opera 15*, iOS Safari 6.0-6.1*, Chrome for Android 0*",
+    "source": "caniuse.com"
+  },
+  "speechsynthesis": {
+    "title": "Web Speech API",
+    "description": "Method to provide speech input and text-to-speech output features in a web browser.",
+    "status": "Unofficial / Note",
+    "support": "Chrome 25*, Safari 6.1*, Safari Mobile 7, Chrome for Android 33*",
+    "source": "caniuse.com"
+  },
+  "performance": {
+    "title": "User Timing API",
+    "description": "Method to help web developers measure the performance of their applications by giving them access to high precision timestamps.",
+    "status": "Recommendation",
+    "support": "IE 10, Chrome 25, Opera 15, Android Browser 4.4, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "highresolutiontime": {
+    "title": "High Resolution Time API",
+    "description": "Method to provide the current time in sub-millisecond resolution and such that it is not subject to system clock skew or adjustments. Called using performance.now()",
+    "status": "Recommendation",
+    "support": "IE 10, Firefox 15, Chrome 20*, Opera 15, Android Browser 4.4, Blackberry Browser 10, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "usertiming": {
+    "title": "User Timing API",
+    "description": "Method to help web developers measure the performance of their applications by giving them access to high precision timestamps.",
+    "status": "Recommendation",
+    "support": "IE 10, Chrome 25, Opera 15, Android Browser 4.4, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "requestanimationframe": {
+    "title": "requestAnimationFrame",
+    "description": "API allowing a more efficient way of running script-based animation, compared to traditional methods using timeouts.",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Firefox 4*, Chrome 10*, Safari 6*, Opera 15, iOS Safari 6.0-6.1*, Android Browser 4.4, Blackberry Browser 10*, Firefox for Android 0*, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "worker": {
+    "title": "Web Workers",
+    "description": "Method of running scripts in the background, isolated from the web page",
+    "status": "Candidate Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 11, iOS Safari 5.0-5.1, Android Browser 2.1, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "sharedworker": {
+    "title": "Shared Web Workers",
+    "description": "Method of allowing multiple scripts to communicate with a single web worker.",
+    "status": "Candidate Recommendation",
+    "support": "Firefox 29, Chrome 4, Safari 5, Opera 11, iOS Safari 5.0-5.1, Blackberry Browser 7, Opera Mobile 11",
+    "source": "caniuse.com"
+  },
+  "currentscript": {
+    "title": "document.currentScript",
+    "description": "Returns the script-element whose script is currently being processed.",
+    "status": "HTML Living Standard",
+    "support": "Chrome 29, Firefox 4, Opera 16, Firefox Mobile ?",
+    "source": "MDN XXXXX "
+  },
+  "MOBILE": {
+    "title": "Is mobile device (smartphone)",
+    "description": "EXPERIMENTAL!",
+    "status": "none",
+    "support": "",
+    "source": "?"
+  },
+  "TABLET": {
+    "title": "Is tablet device",
+    "description": "EXPERIMENTAL!",
+    "status": "none",
+    "support": "",
+    "source": "?"
+  },
+  "DESKTOP": {
+    "title": "Is desktop device",
+    "description": "EXPERIMENTAL!",
+    "status": "none",
+    "support": "",
+    "source": "?"
+  },
+  "SLOWCONNECTION": {
+    "title": "Is slow connection",
+    "description": "Network connection feature detection referenced from Modernizr - Copyright (c) Faruk Ates, Paul Irish, Alex Sexton",
+    "status": "none",
+    "support": "Firefox 12, Firefox Mobile 12, Android Browser 2.2, Firefox OS 1.5",
+    "source": "?"
+  },
+  "RETINA": {
+    "title": "Detect Retina Display",
+    "description": "",
+    "status": "none",
+    "support": "",
+    "source": "?"
+  }
+}

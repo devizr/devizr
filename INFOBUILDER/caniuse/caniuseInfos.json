@@ -1,0 +1,1148 @@
+{
+  "e-30": {
+    "support": "none"
+  },
+  "e-29": {
+    "support": "none"
+  },
+  "e-28": {
+    "support": "none"
+  },
+  "e-27": {
+    "support": "none"
+  },
+  "e-26": {
+    "support": "none"
+  },
+  "e-25": {
+    "support": "none"
+  },
+  "e-24": {
+    "support": "none"
+  },
+  "e-23": {
+    "support": "none"
+  },
+  "e-22": {
+    "support": "none"
+  },
+  "e-21": {
+    "support": "none"
+  },
+  "e-20": {
+    "support": "none"
+  },
+  "e-19": {
+    "support": "none"
+  },
+  "e-18": {
+    "support": "none"
+  },
+  "e-17": {
+    "support": "none"
+  },
+  "e-16": {
+    "support": "none"
+  },
+  "e-15": {
+    "support": "none"
+  },
+  "e-14": {
+    "support": "none"
+  },
+  "e-13": {
+    "support": "none"
+  },
+  "e-12": {
+    "support": "none"
+  },
+  "e-11": {
+    "support": "none"
+  },
+  "e-10": {
+    "support": "none"
+  },
+  "e-9": {
+    "support": "none"
+  },
+  "e-8": {
+    "support": "none"
+  },
+  "e-7": {
+    "support": "none"
+  },
+  "e-6": {
+    "support": "none"
+  },
+  "e-5": {
+    "support": "none"
+  },
+  "e-4": {
+    "support": "none"
+  },
+  "e-3": {
+    "support": "none"
+  },
+  "e-2": {
+    "support": "none"
+  },
+  "e-1": {
+    "support": "none"
+  },
+  "e0": {
+    "support": "none"
+  },
+  "e1": {
+    "support": "none"
+  },
+  "e2": {
+    "support": "none"
+  },
+  "e3": {
+    "support": "none"
+  },
+  "ie": {
+    "support": "none"
+  },
+  "firefox": {
+    "support": "none"
+  },
+  "chrome": {
+    "support": "none"
+  },
+  "safari": {
+    "support": "none"
+  },
+  "opera": {
+    "support": "none"
+  },
+  "ios_saf": {
+    "support": "none"
+  },
+  "op_mini": {
+    "support": "none"
+  },
+  "android": {
+    "support": "none"
+  },
+  "op_mob": {
+    "support": "none"
+  },
+  "bb": {
+    "support": "none"
+  },
+  "and_chr": {
+    "support": "none"
+  },
+  "and_ff": {
+    "support": "none"
+  },
+  "ie_mob": {
+    "support": "none"
+  },
+  "rec": {
+    "support": "none"
+  },
+  "pr": {
+    "support": "none"
+  },
+  "cr": {
+    "support": "none"
+  },
+  "wd": {
+    "support": "none"
+  },
+  "other": {
+    "support": "none"
+  },
+  "unoff": {
+    "support": "none"
+  },
+  "CSS": {
+    "support": "none"
+  },
+  "HTML5": {
+    "support": "none"
+  },
+  "JS API": {
+    "support": "none"
+  },
+  "Other": {
+    "support": "none"
+  },
+  "SVG": {
+    "support": "none"
+  },
+  "png-alpha": {
+    "title": "PNG alpha transparency",
+    "description": "Semi-transparent areas in PNG files",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "apng": {
+    "title": "Animated PNG (APNG)",
+    "description": "Like animated GIFs, but allowing 24-bit colors and alpha transparency",
+    "status": "Unofficial / Note",
+    "support": "Firefox 3, Opera 11, Opera Mobile 10"
+  },
+  "video": {
+    "title": "Video element",
+    "description": "Method of playing videos on webpages (without requiring a plug-in)",
+    "status": "Working Draft",
+    "support": "IE 9, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "audio": {
+    "title": "Audio element",
+    "description": "Method of playing sound on webpages (without requiring a plug-in)",
+    "status": "Working Draft",
+    "support": "IE 9, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 4.0-4.1, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "contenteditable": {
+    "title": "contenteditable attribute (basic support)",
+    "description": "Method of making any HTML element editable",
+    "status": "Candidate Recommendation",
+    "support": "IE 6, Firefox 3, Chrome 4, Safari 4, Opera 9, iOS Safari 5.0-5.1, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "dragndrop": {
+    "title": "Drag and Drop",
+    "description": "Method of easily dragging and dropping elements on a page, requiring minimal JavaScript.",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, Opera Mobile 10, IE Mobile 10"
+  },
+  "queryselector": {
+    "title": "querySelector/querySelectorAll",
+    "description": "Method of accessing DOM elements using CSS selectors",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "getelementsbyclassname": {
+    "title": "getElementsByClassName",
+    "description": "Method of accessing DOM elements by class name",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "forms": {
+    "title": "HTML5 form features",
+    "description": "Expanded form options, including things like date pickers, sliders, validation, placeholders and multiple file uploads. Previously known as \"Web forms 2.0\".",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 4.0-4.1, Android Browser 4.4, Blackberry Browser 10, IE Mobile 10"
+  },
+  "html5semantic": {
+    "title": "New semantic elements",
+    "description": "HTML5 offers some new elements, primarily for semantic purposes. The elements include: section, article, aside, header, footer, nav, figure, figcaption, time, mark, main.",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 3, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "offline-apps": {
+    "title": "Offline web applications",
+    "description": "Method of defining web page files to be cached using a cache manifest file, allowing them to work offline on subsequent visits to the page",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "webworkers": {
+    "title": "Web Workers",
+    "description": "Method of running scripts in the background, isolated from the web page",
+    "status": "Candidate Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 11, iOS Safari 5.0-5.1, Android Browser 2.1, Blackberry Browser 7, IE Mobile 10"
+  },
+  "fontface": {
+    "title": "@font-face Web fonts",
+    "description": "Method of displaying fonts downloaded from websites",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "eot": {
+    "title": "EOT - Embedded OpenType fonts",
+    "description": "Type of font that can be derived from a regular font, allowing small files and legal use of high-quality fonts. Usage is restricted by the file being tied to the website",
+    "status": "Unofficial / Note",
+    "support": "IE 6"
+  },
+  "woff": {
+    "title": "WOFF - Web Open Font Format",
+    "description": "Compressed TrueType/OpenType font that contains information about the font's source.",
+    "status": "Recommendation",
+    "support": "IE 9, Firefox 4, Chrome 5, Safari 6, Opera 12, iOS Safari 5.0-5.1, Android Browser 4.4, Blackberry Browser 7, IE Mobile 10"
+  },
+  "multibackgrounds": {
+    "title": "CSS3 Multiple backgrounds",
+    "description": "Method of using multiple images as a background",
+    "status": "Candidate Recommendation",
+    "support": "IE 9, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "border-image": {
+    "title": "CSS3 Border images",
+    "description": "Method of using images for borders",
+    "status": "Candidate Recommendation",
+    "support": "IE 11, Firefox 4*, Chrome 4*, Safari 4*, Opera 11*, iOS Safari 3.2*, Android Browser 3*, Blackberry Browser 7*"
+  },
+  "background-img-opts": {
+    "title": "CSS3 Background-image options",
+    "description": "New properties to affect background images, including background-clip, background-origin and background-size",
+    "status": "Candidate Recommendation",
+    "support": "IE 9, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "css-table": {
+    "title": "CSS Table display",
+    "description": "Method of displaying elements as tables, rows, and cells",
+    "status": "Recommendation",
+    "support": "IE 8, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "css-gencontent": {
+    "title": "CSS Generated content for pseudo-elements",
+    "description": "Method of displaying text or images before or after the given element's contents using the :before and :after pseudo-elements",
+    "status": "Recommendation",
+    "support": "IE 8, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "css-fixed": {
+    "title": "CSS position:fixed",
+    "description": "Method of keeping an element in a fixed location regardless of scroll position",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 5.0-5.1, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "hashchange": {
+    "title": "Hashchange event",
+    "description": "Event triggered in JavaScript when the URL's hash has changed (for example: page.html#foo to page.html#bar) ",
+    "status": "Candidate Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 4.0-4.1, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "css-sel2": {
+    "title": "CSS 2.1 selectors",
+    "description": "Allows more accurate element selecting, using >, +, [attr], :first-child, etc.",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "css-sel3": {
+    "title": "CSS3 selectors",
+    "description": "Advanced element selection using selectors like :nth-child(), :last-child, :first-of-type, etc.",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "css-textshadow": {
+    "title": "CSS3 Text-shadow",
+    "description": "Method of applying one or more shadow or blur effects to text",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "css-boxshadow": {
+    "title": "CSS3 Box-shadow",
+    "description": "Method of displaying an inner or outer shadow effect to elements",
+    "status": "Candidate Recommendation",
+    "support": "IE 9, Firefox 4, Chrome 4*, Safari 4*, Opera 11, iOS Safari 3.2*, Android Browser 3*, Blackberry Browser 7*, IE Mobile 10"
+  },
+  "css3-colors": {
+    "title": "CSS3 Colors",
+    "description": "Method of describing colors using Hue, Saturation and Lightness (hsl()) rather than just RGB, as well as allowing alpha-transparency with rgba() and hsla().",
+    "status": "Recommendation",
+    "support": "IE 9, Firefox 2, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "css3-boxsizing": {
+    "title": "CSS3 Box-sizing",
+    "description": "Method of specifying whether or not an element's borders and padding should be included in size units",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2*, Chrome 4*, Safari 4*, Opera 11, iOS Safari 3.2*, Opera Mini 5.0-7.0, Android Browser 3*, Blackberry Browser 7*, Firefox for Android 0*, IE Mobile 10"
+  },
+  "css-mediaqueries": {
+    "title": "CSS3 Media Queries",
+    "description": "Method of applying styles based on media information. Includes things like page and device dimensions",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "multicolumn": {
+    "title": "CSS3 Multiple column layout",
+    "description": "Method of flowing information in multiple columns",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Firefox 2*, Chrome 4*, Safari 4*, Opera 12, iOS Safari 3.2*, Opera Mini 5.0-7.0, Android Browser 3*, Blackberry Browser 7*, Opera Mobile 0*, Chrome for Android 0*, Firefox for Android 0*, IE Mobile 10"
+  },
+  "border-radius": {
+    "title": "CSS3 Border-radius (rounded corners)",
+    "description": "Method of making the border corners round",
+    "status": "Candidate Recommendation",
+    "support": "IE 9, Firefox 2*, Chrome 4*, Safari 4*, Opera 11, iOS Safari 3.2*, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "transforms2d": {
+    "title": "CSS3 Transforms",
+    "description": "Method of transforming an element including rotating, scaling, etc.",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 4*, Chrome 4*, Safari 4*, Opera 11*, iOS Safari 3.2*, Android Browser 3*, Blackberry Browser 7*, Opera Mobile 0*, Chrome for Android 0*, IE Mobile 10"
+  },
+  "use-strict": {
+    "title": "ECMAScript 5 Strict Mode",
+    "description": "Method of placing code in a \"strict\" operating context.",
+    "status": "Other",
+    "support": "IE 10, Firefox 4, Chrome 13, Safari 5, Opera 12, iOS Safari 5.0-5.1, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "transforms3d": {
+    "title": "CSS3 3D Transforms",
+    "description": "Method of transforming an element in the third dimension",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 10*, Chrome 12*, Safari 4*, Opera 15*, iOS Safari 3.2*, Android Browser 3*, Blackberry Browser 7*, Opera Mobile 0*, Chrome for Android 0*, IE Mobile 10"
+  },
+  "sharedworkers": {
+    "title": "Shared Web Workers",
+    "description": "Method of allowing multiple scripts to communicate with a single web worker.",
+    "status": "Candidate Recommendation",
+    "support": "Firefox 29, Chrome 4, Safari 5, Opera 11, iOS Safari 5.0-5.1, Blackberry Browser 7, Opera Mobile 11"
+  },
+  "css-hyphens": {
+    "title": "CSS Hyphenation",
+    "description": "Method of controlling when words at the end of lines should be hyphenated using the \"hyphens\" property.",
+    "status": "Working Draft",
+    "support": "IE 10*, Firefox 6*, Safari 6*, iOS Safari 4.2-4.3*, Firefox for Android 0*"
+  },
+  "css-transitions": {
+    "title": "CSS3 Transitions",
+    "description": "Simple method of animating certain properties of an element",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 4*, Chrome 4*, Safari 4*, Opera 11*, iOS Safari 3.2*, Android Browser 3*, Blackberry Browser 7*, IE Mobile 10"
+  },
+  "font-feature": {
+    "title": "Font feature settings",
+    "description": "Method of applying advanced typographic and language-specific font features to supported OpenType fonts.",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 4*, Chrome 16*, Safari 4, Opera 15*, iOS Safari 3.2, Android Browser 4.4*, Blackberry Browser 10*, Opera Mobile 0*, Chrome for Android 0*, Firefox for Android 0*"
+  },
+  "css-animation": {
+    "title": "CSS3 Animation",
+    "description": "Complex method of animating certain properties of an element",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 5*, Chrome 4*, Safari 4*, Opera 12*, iOS Safari 3.2*, Android Browser 3*, Blackberry Browser 7*, Opera Mobile 0*, Chrome for Android 0*, IE Mobile 10"
+  },
+  "css-gradients": {
+    "title": "CSS Gradients",
+    "description": "Method of defining a linear or radial color gradient as a CSS image.",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Firefox 4*, Chrome 4*, Safari 4*, Opera 12*, iOS Safari 3.2*, Android Browser 3*, Blackberry Browser 7*, IE Mobile 10"
+  },
+  "css-canvas": {
+    "title": "CSS Canvas Drawings",
+    "description": "Method of using HTML5 Canvas as a background image",
+    "status": "Unofficial / Note",
+    "support": "Chrome 4*, Safari 4*, Opera 15*, iOS Safari 3.2*, Android Browser 3*, Blackberry Browser 7*, Opera Mobile 0*, Chrome for Android 0*"
+  },
+  "css-reflections": {
+    "title": "CSS Reflections",
+    "description": "Method of displaying a reflection of an element",
+    "status": "Unofficial / Note",
+    "support": "Chrome 4*, Safari 4*, Opera 15*, iOS Safari 3.2*, Android Browser 3*, Blackberry Browser 7*, Opera Mobile 0*, Chrome for Android 0*"
+  },
+  "css-masks": {
+    "title": "CSS Masks",
+    "description": "Method of displaying part of an element, using a selected image as a mask",
+    "status": "Working Draft",
+    "support": "Firefox 4, Chrome 4*, Safari 4*, Opera 15*, iOS Safari 3.2*, Android Browser 3*, Blackberry Browser 7*, Opera Mobile 0*, Chrome for Android 0*"
+  },
+  "svg": {
+    "title": "SVG (basic support)",
+    "description": "Method of displaying basic Vector Graphics features using the embed or object elements. Refers to the SVG 1.1 spec.",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "svg-css": {
+    "title": "SVG in CSS backgrounds",
+    "description": "Method of using SVG images as CSS backgrounds",
+    "status": "Candidate Recommendation",
+    "support": "IE 9, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "svg-smil": {
+    "title": "SVG SMIL animation",
+    "description": "Method of using animation elements to animate SVG images",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "svg-fonts": {
+    "title": "SVG fonts",
+    "description": "Method of using fonts defined as SVG shapes",
+    "status": "Recommendation",
+    "support": "IE 6, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7"
+  },
+  "svg-filters": {
+    "title": "SVG filters",
+    "description": "Method of using photoshop-like effects on SVG objects including blurring and color manipulation.",
+    "status": "Recommendation",
+    "support": "IE 10, Firefox 3, Chrome 5, Safari 6, Opera 9, iOS Safari 6.0-6.1, Opera Mini 5.0-7.0, Android Browser 4.4, Blackberry Browser 10, IE Mobile 10"
+  },
+  "svg-html": {
+    "title": "SVG effects for HTML",
+    "description": "Method of using SVG transforms, filters, etc on HTML elements using either CSS or the foreignObject element",
+    "status": "Working Draft",
+    "support": "IE 9, Firefox 3, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Android Browser 4.4, Blackberry Browser 10"
+  },
+  "svg-html5": {
+    "title": "Inline SVG in HTML5",
+    "description": "Method of using SVG tags directly in HTML documents. Requires HTML5 parser.",
+    "status": "Candidate Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "canvas": {
+    "title": "Canvas (basic support)",
+    "description": "Method of generating fast, dynamic graphics using JavaScript",
+    "status": "Candidate Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "canvas-text": {
+    "title": "Text API for Canvas",
+    "description": "Method of displaying text on Canvas elements",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "namevalue-storage": {
+    "title": "Web Storage - name/value pairs",
+    "description": "Method of storing data locally like cookies, but for larger amounts of data (sessionStorage and localStorage, used to fall under HTML5).",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "sql-storage": {
+    "title": "Web SQL Database",
+    "description": "Method of storing data client-side, allows Sqlite database queries for access and manipulation",
+    "status": "Unofficial / Note",
+    "support": "Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7"
+  },
+  "indexeddb": {
+    "title": "IndexedDB",
+    "description": "Method of storing data client-side, allows indexed database queries. Previously known as WebSimpleDB API.",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Firefox 4*, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "eventsource": {
+    "title": "Server-sent DOM events",
+    "description": "Method of continuously sending data from a server to the browser, rather than repeatedly requesting it (EventSource interface, used to fall under HTML5)",
+    "status": "Candidate Recommendation",
+    "support": "Firefox 6, Chrome 6, Safari 5, Opera 9, iOS Safari 4.0-4.1, Android Browser 4.4, Blackberry Browser 7"
+  },
+  "x-doc-messaging": {
+    "title": "Cross-document messaging",
+    "description": "Method of sending information from a page on one domain to a page on a different one (using postMessage)",
+    "status": "Working Draft",
+    "support": "IE 8, Firefox 3, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "datauri": {
+    "title": "Data URIs",
+    "description": "Method of embedding images and other files in webpages as a string of text",
+    "status": "Other",
+    "support": "IE 8, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "mathml": {
+    "title": "MathML",
+    "description": "Special tags that allow mathematical formulas and notations to be written on web pages.",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7"
+  },
+  "css-featurequeries": {
+    "title": "CSS Feature Queries",
+    "description": "CSS Feature Queries allow authors to condition rules based on whether particular property declarations are supported in CSS using the @supports at rule.",
+    "status": "Candidate Recommendation",
+    "support": "Firefox 22, Chrome 28, Opera 15, Android Browser 4.4"
+  },
+  "xhtml": {
+    "title": "XHTML served as application/xhtml+xml",
+    "description": "A strict form of HTML, and allows embedding of other XML languages",
+    "status": "Recommendation",
+    "support": "IE 9, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "xhtmlsmil": {
+    "title": "XHTML+SMIL animation",
+    "description": "Method of using SMIL animation in web pages",
+    "status": "Unofficial / Note",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7"
+  },
+  "wai-aria": {
+    "title": "WAI-ARIA Accessibility features",
+    "description": "Method of providing ways for people with disabilities to use dynamic web content and web applications.",
+    "status": "Recommendation",
+    "support": "IE 8, Firefox 2, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 4.4, IE Mobile 10"
+  },
+  "geolocation": {
+    "title": "Geolocation",
+    "description": "Method of informing a website of the user's geographical location",
+    "status": "Candidate Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "flexbox": {
+    "title": "Flexible Box Layout Module",
+    "description": "Method of positioning elements in horizontal or vertical stacks.",
+    "status": "Candidate Recommendation",
+    "support": "IE 10*, Firefox 2*, Chrome 4*, Safari 4*, Opera 15*, iOS Safari 3.2*, Android Browser 3*, Blackberry Browser 7*, Firefox for Android 0*, IE Mobile 10*"
+  },
+  "webgl": {
+    "title": "WebGL - 3D Canvas graphics",
+    "description": "Method of generating dynamic 3D graphics using JavaScript, accelerated through hardware",
+    "status": "Other",
+    "support": "IE 6, Firefox 4, Chrome 8, Safari 6, Opera 12, Blackberry Browser 10, IE Mobile 10"
+  },
+  "fileapi": {
+    "title": "File API",
+    "description": "Method of manipulating file objects in web applications client-side, as well as programmatically selecting them and accessing their data.",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 4, Chrome 6, Safari 6, Opera 12, iOS Safari 6.0-6.1, Android Browser 3, Blackberry Browser 7"
+  },
+  "shadowdom": {
+    "title": "Shadow DOM",
+    "description": "Method of establishing and maintaining functional boundaries between DOM trees and how these trees interact with each other within a document, thus enabling better functional encapsulation within the DOM.",
+    "status": "Working Draft",
+    "support": "Firefox 30, Chrome 25*, Opera 15*, Android Browser 4.4*, Opera Mobile 0*, Chrome for Android 0*"
+  },
+  "websockets": {
+    "title": "Web Sockets",
+    "description": "Bidirectional communication technology for web apps",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Firefox 4, Chrome 4, Safari 5, Opera 11, iOS Safari 4.2-4.3, Android Browser 4.4, Blackberry Browser 7, IE Mobile 10"
+  },
+  "script-async": {
+    "title": "async attribute for external scripts",
+    "description": "The boolean async attribute on script elements allows the external JavaScript file to run when it's available, without delaying page load first.",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Firefox 4, Chrome 8, Safari 5, Opera 15, iOS Safari 5.0-5.1, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "cors": {
+    "title": "Cross-Origin Resource Sharing",
+    "description": "Method of performing XMLHttpRequests across domains",
+    "status": "Recommendation",
+    "support": "IE 8, Firefox 4, Chrome 4, Safari 4, Opera 12, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "calc": {
+    "title": "calc() as CSS unit value",
+    "description": "Method of allowing calculated values for length units, i.e. width: calc(100% - 3em)",
+    "status": "Candidate Recommendation",
+    "support": "IE 9, Firefox 4*, Chrome 19*, Safari 6*, Opera 15, iOS Safari 6.0-6.1*, Android Browser 4.4, Blackberry Browser 10*, IE Mobile 10"
+  },
+  "ruby": {
+    "title": "Ruby annotation",
+    "description": "Method of adding pronunciation or other annotations using ruby elements (primarily used in East Asian typography)",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "css-opacity": {
+    "title": "CSS3 Opacity",
+    "description": "Method of setting the transparency level of an element",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "form-validation": {
+    "title": "Form validation",
+    "description": "Method of setting required fields and field types without requiring JavaScript",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 4, Chrome 10, Safari 5, Opera 11, Blackberry Browser 10, IE Mobile 10"
+  },
+  "history": {
+    "title": "Session history management",
+    "description": "Method of manipulating the user's browser's session history in JavaScript using history.pushState, history.replaceState and the popstate event",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Firefox 4, Chrome 5, Safari 5, Opera 12, iOS Safari 4.2-4.3, Android Browser 2.2, Blackberry Browser 7, IE Mobile 10"
+  },
+  "json": {
+    "title": "JSON parsing",
+    "description": "Method of converting JavaScript objects to JSON strings and JSON back to objects using JSON.stringify() and JSON.parse()",
+    "status": "Other",
+    "support": "IE 8, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 4.0-4.1, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "classlist": {
+    "title": "classList (DOMTokenList )",
+    "description": "Method of easily manipulating classes on elements, using the DOMTokenList object.",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "text-overflow": {
+    "title": "CSS3 Text-overflow",
+    "description": "Append ellipsis when text overflows its containing element",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9*, iOS Safari 3.2, Opera Mini 5.0-7.0*, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "webm": {
+    "title": "WebM video format",
+    "description": "Multimedia format designed to provide a royalty-free, high-quality open video compression format for use with HTML5 video. WebM supports the video codec VP8 and VP9.",
+    "status": "Other",
+    "support": "IE 9, Firefox 4, Chrome 6, Safari 4, Opera 11, Android Browser 3, IE Mobile 10"
+  },
+  "mpeg4": {
+    "title": "MPEG-4/H.264 video format",
+    "description": "Commonly used video compression format (not royalty-free)",
+    "status": "Other",
+    "support": "IE 9, Firefox 21, Chrome 4, Safari 4, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "ogv": {
+    "title": "Ogg/Theora video format",
+    "description": "Free lossy video compression format.",
+    "status": "Other",
+    "support": "IE 9, Firefox 4, Chrome 4, Opera 11, IE Mobile 10"
+  },
+  "wordwrap": {
+    "title": "CSS3 Overflow-wrap",
+    "description": "Allows lines to be broken within words if an otherwise unbreakable string is too long to fit.",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "progressmeter": {
+    "title": "Progress & Meter",
+    "description": "Method of indicating a progress state (progress element) or the current level of a gauge (meter element).\r\n",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 6, Chrome 8, Safari 6, Opera 11, iOS Safari 7.0, Android Browser 4.4, Blackberry Browser 7, IE Mobile 10"
+  },
+  "object-fit": {
+    "title": "CSS3 object-fit/object-position",
+    "description": "Method of specifying how an object (image or video) should fit inside its box. object-fit options include \"contain\" (fit according to aspect ratio), \"fill\" (stretches object to fill) and \"cover\" (overflows box but maintains ratio), where object-position allows the object to be repositioned like background-image does.",
+    "status": "Candidate Recommendation",
+    "support": "Chrome 32, Opera 11*, Opera Mobile 11*"
+  },
+  "xhr2": {
+    "title": "XMLHttpRequest 2",
+    "description": "Adds more functionality to AJAX requests like file uploads, transfer progress information and the ability to send form data.",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 4, Chrome 7, Safari 5, Opera 12, iOS Safari 5.0-5.1, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "minmaxwh": {
+    "title": "CSS min/max-width/height",
+    "description": "Method of setting a minimum or maximum width or height to an element. ",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "details": {
+    "title": "Details & Summary elements",
+    "description": "The &lt;details> element generates a simple no-JavaScript widget to show/hide element contents, optionally by clicking on its child &lt;summary> element.",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 3, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7"
+  },
+  "text-stroke": {
+    "title": "CSS text-stroke",
+    "description": "Method of declaring the outline (stroke) width and color for text.",
+    "status": "Unofficial / Note",
+    "support": "Chrome 4*, Safari 4*, Opera 15*, iOS Safari 3.2*, Android Browser 4*, Blackberry Browser 7*, Opera Mobile 0*, Chrome for Android 0*"
+  },
+  "inline-block": {
+    "title": "CSS inline-block",
+    "description": "Method of displaying an element as a block while flowing it with text. ",
+    "status": "Recommendation",
+    "support": "IE 6, Firefox 2*, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "notifications": {
+    "title": "Web Notifications",
+    "description": "Method of alerting the user outside of a web page by displaying notifications (that do not require interaction by the user).",
+    "status": "Working Draft",
+    "support": "Firefox 22, Chrome 5*, Safari 6, Android Browser 4.4*, Blackberry Browser 10, Opera Mobile 0*"
+  },
+  "stream": {
+    "title": "getUserMedia/Stream API",
+    "description": "Method of accessing external device data (such as a webcam video stream). Formerly this was envisioned as the &lt;device> element.",
+    "status": "Working Draft",
+    "support": "Firefox 17*, Chrome 21*, Opera 12, Blackberry Browser 10*, Opera Mobile 0*, Firefox for Android 0*"
+  },
+  "svg-img": {
+    "title": "SVG in HTML img element",
+    "description": "Method of displaying SVG images in HTML using &lt;img>",
+    "status": "Candidate Recommendation",
+    "support": "IE 9, Firefox 4, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "datalist": {
+    "title": "Datalist element",
+    "description": "Method of setting a list of options for a user to select in a text field, while leaving the ability to enter a custom value.",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "dataset": {
+    "title": "dataset & data-* attributes",
+    "description": "Method of applying and accessing custom data to elements.",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "css-grid": {
+    "title": "CSS Grid Layout",
+    "description": "Method of using a grid concept to lay out content, providing a mechanism for authors to divide available space for lay out into columns and rows using a set of predictable sizing behaviors",
+    "status": "Working Draft",
+    "support": "IE 9, Firefox 19, Chrome 25, Safari 6, iOS Safari 6.0-6.1, Android Browser 4.2-4.3, IE Mobile 10*"
+  },
+  "menu": {
+    "title": "Toolbar/context menu",
+    "description": "Method of defining a toolbar menu, a context menu or a list of (interactive) options using the &lt;menu> element.",
+    "status": "Candidate Recommendation",
+    "support": "Firefox 8"
+  },
+  "rem": {
+    "title": "rem (root em) units",
+    "description": "Type of unit similar to \"em\", but relative only to the root element, not any parent element. Thus compounding does not occur as it does with \"em\" units.",
+    "status": "Candidate Recommendation",
+    "support": "IE 9, Firefox 4, Chrome 6, Safari 5, Opera 12, iOS Safari 4.0-4.1, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "ttf": {
+    "title": "TTF/OTF - TrueType and OpenType font support",
+    "description": "Support for the TrueType (.ttf)and OpenType (.otf) outline font formats in @font-face. ",
+    "status": "Other",
+    "support": "IE 9, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 4.2-4.3, Android Browser 3, Blackberry Browser 7"
+  },
+  "touch": {
+    "title": "Touch events",
+    "description": "Method of registering when, where and how the interface is touched, for devices with a touch screen. These DOM events are similar to mousedown, mousemove, etc.",
+    "status": "Recommendation",
+    "support": "IE 10, Firefox 4, Chrome 22, Opera 15, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "matchesselector": {
+    "title": "matches() DOM method",
+    "description": "Method of testing whether or not a DOM element matches a given selector. Formerly known (and largely supported with prefix) as matchesSelector.",
+    "status": "Working Draft",
+    "support": "IE 9*, Firefox 4*, Chrome 4*, Safari 5*, Opera 12*, iOS Safari 4.0-4.1*, Android Browser 3*, Blackberry Browser 7*, Opera Mobile 0*, Chrome for Android 0*, Firefox for Android 0*, IE Mobile 10*"
+  },
+  "pointer-events": {
+    "title": "CSS pointer-events (for HTML)",
+    "description": "This CSS property, when set to \"none\" allows elements to not receive hover/click events, instead the event will occur on anything behind it. ",
+    "status": "Unofficial / Note",
+    "support": "IE 11, Firefox 4, Chrome 4, Safari 4, Opera 15, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7"
+  },
+  "blobbuilder": {
+    "title": "Blob constructing",
+    "description": "Construct Blobs (binary large objects) either using the BlobBuilder API (deprecated) or the Blob constructor.",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 6*, Chrome 8*, Safari 6, Opera 15, iOS Safari 6.0-6.1, Android Browser 3*, Blackberry Browser 10, IE Mobile 10"
+  },
+  "filereader": {
+    "title": "FileReader API",
+    "description": "Method of reading the contents of a File or Blob object into memory",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 4, Chrome 6, Safari 6, Opera 12, iOS Safari 6.0-6.1, Android Browser 3, Blackberry Browser 10, IE Mobile 10"
+  },
+  "filesystem": {
+    "title": "Filesystem & FileWriter API",
+    "description": "Method of reading and writing files to a sandboxed file system.\r\n",
+    "status": "Working Draft",
+    "support": "Chrome 8*, Opera 15*, Blackberry Browser 10*, Opera Mobile 0*, Chrome for Android 0*"
+  },
+  "bloburls": {
+    "title": "Blob URLs",
+    "description": "Method of creating URL handles to the specified File or Blob object.",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 4, Chrome 8*, Safari 6*, Opera 15, iOS Safari 6.0-6.1*, Android Browser 4*, Blackberry Browser 10*, Opera Mobile 0*"
+  },
+  "typedarrays": {
+    "title": "Typed Arrays",
+    "description": "JavaScript typed arrays provide a mechanism for accessing raw binary data much more efficiently.\r\n",
+    "status": "Other",
+    "support": "IE 10, Firefox 4, Chrome 7, Safari 6, Opera 12, iOS Safari 4.2-4.3, Android Browser 4, Blackberry Browser 10, IE Mobile 10"
+  },
+  "deviceorientation": {
+    "title": "DeviceOrientation events",
+    "description": "API for detecting orientation and motion events from the device running the browser.",
+    "status": "Working Draft",
+    "support": "IE 11, Firefox 4, Chrome 7, Opera 15, iOS Safari 4.2-4.3, Android Browser 3, Blackberry Browser 10"
+  },
+  "script-defer": {
+    "title": "defer attribute for external scripts",
+    "description": "The boolean defer attribute on script elements allows the external JavaScript file to run when the DOM is loaded, without delaying page load first.",
+    "status": "Candidate Recommendation",
+    "support": "IE 6, Firefox 4, Chrome 8, Safari 5, Opera 15, iOS Safari 5.0-5.1, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "nav-timing": {
+    "title": "Navigation Timing API",
+    "description": "API for accessing timing information related to navigation and elements.",
+    "status": "Candidate Recommendation",
+    "support": "IE 9, Firefox 7, Chrome 6*, Opera 15, Android Browser 4, Blackberry Browser 10, IE Mobile 10"
+  },
+  "audio-api": {
+    "title": "Web Audio API",
+    "description": "High-level JavaScript API for processing and synthesizing audio",
+    "status": "Working Draft",
+    "support": "Firefox 25, Chrome 10*, Safari 6*, Opera 15*, iOS Safari 6.0-6.1*, Chrome for Android 0*"
+  },
+  "css-regions": {
+    "title": "CSS Regions",
+    "description": "Method of flowing content into multiple elements.",
+    "status": "Working Draft",
+    "support": "IE 10*, Chrome 15*, Safari 7*, iOS Safari 7.0*, IE Mobile 10*"
+  },
+  "fullscreen": {
+    "title": "Full Screen API",
+    "description": "API for allowing content (like a video or canvas element) to take up the entire screen.",
+    "status": "Working Draft",
+    "support": "IE 11*, Firefox 10*, Chrome 15*, Safari 6*, Opera 15*, Blackberry Browser 10, Opera Mobile 0*, Chrome for Android 0*, Firefox for Android 0*"
+  },
+  "requestanimationframe": {
+    "title": "requestAnimationFrame",
+    "description": "API allowing a more efficient way of running script-based animation, compared to traditional methods using timeouts.",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Firefox 4*, Chrome 10*, Safari 6*, Opera 15, iOS Safari 6.0-6.1*, Android Browser 4.4, Blackberry Browser 10*, Firefox for Android 0*, IE Mobile 10"
+  },
+  "input-range": {
+    "title": "Range input type",
+    "description": "Form field type that allows the user to select a value using a slider widget.",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 23, Chrome 5, Safari 4, Opera 9, iOS Safari 5.0-5.1, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "matchmedia": {
+    "title": "matchMedia",
+    "description": "API for finding out whether or not a media query applies to the document.",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 6, Chrome 9, Safari 6, Opera 15, iOS Safari 5.0-5.1, Android Browser 3, Blackberry Browser 10, IE Mobile 10"
+  },
+  "input-datetime": {
+    "title": "Date/time input types",
+    "description": "Form field widget to easily allow users to enter dates and/or times, generally by using a calendar widget.",
+    "status": "Working Draft",
+    "support": "Chrome 20, Opera 9, iOS Safari 5.0-5.1, Android Browser 4.4, Blackberry Browser 10"
+  },
+  "input-color": {
+    "title": "Color input type",
+    "description": "Form field allowing the user to select a color.",
+    "status": "Working Draft",
+    "support": "Firefox 29, Chrome 20, Opera 11, Android Browser 4.4, Blackberry Browser 7"
+  },
+  "input-number": {
+    "title": "Number input type",
+    "description": "Form field type for numbers.",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 29, Chrome 7, Safari 5, Opera 9, iOS Safari 3.2, Android Browser 4, Blackberry Browser 10, IE Mobile 10"
+  },
+  "iframe-sandbox": {
+    "title": "sandbox attribute for iframes",
+    "description": "Method of running external site pages with reduced privileges (e.g. no JavaScript) in iframes",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Firefox 17, Chrome 4, Safari 5, Opera 15, iOS Safari 4.2-4.3, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "css-counters": {
+    "title": "CSS Counters",
+    "description": "Method of controlling number values in generated content, using the counter-reset and counter-increment properties.",
+    "status": "Working Draft",
+    "support": "IE 8, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "css-resize": {
+    "title": "CSS resize property",
+    "description": "Method of allowing an element to be resized by the user, with options to limit to a given direction. ",
+    "status": "Working Draft",
+    "support": "Firefox 4*, Chrome 4, Safari 4, Opera 15"
+  },
+  "input-placeholder": {
+    "title": "input placeholder attribute",
+    "description": "Method of setting placeholder text for text-like input fields, to suggest the expected inserted information.",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "spdy": {
+    "title": "SPDY networking protocol",
+    "description": "Networking protocol for low-latency transport of content over the web.",
+    "status": "Unofficial / Note",
+    "support": "IE 11, Firefox 13, Chrome 4, Opera 15, Android Browser 3"
+  },
+  "css-repeating-gradients": {
+    "title": "CSS Repeating Gradients",
+    "description": "Method of defining a repeating linear or radial color gradient as a CSS image.",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Firefox 4*, Chrome 10*, Safari 6*, Opera 12*, iOS Safari 5.0-5.1*, Android Browser 4*, Blackberry Browser 10*, Firefox for Android 0*, IE Mobile 10"
+  },
+  "css-filters": {
+    "title": "CSS Filter Effects",
+    "description": "Method of applying filter effects (like blur, grayscale, brightness, contrast and hue) to elements, previously only possible by using SVG.",
+    "status": "Working Draft",
+    "support": "Chrome 18*, Safari 6*, Opera 15*, iOS Safari 6.0-6.1*, Android Browser 4.4*, Blackberry Browser 10*, Opera Mobile 0*, Chrome for Android 0*"
+  },
+  "getcomputedstyle": {
+    "title": "getComputedStyle",
+    "description": "API to get the current computed CSS styles applied to an element. This may be the current value applied by an animation or as set by a stylesheet.",
+    "status": "Recommendation",
+    "support": "IE 9, Firefox 3, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "word-break": {
+    "title": "CSS3 word-break",
+    "description": "Property to prevent or allow words to be broken over multiple lines between letters.",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 15, Chrome 4, Safari 4, Opera 15, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "viewport-units": {
+    "title": "Viewport units: vw, vh, vmin, vmax",
+    "description": "Length units representing 1% of the viewport size for viewport width (vw), height (vh), the smaller of the two (vmin), or the larger of the two (vmax).",
+    "status": "Candidate Recommendation",
+    "support": "IE 9, Firefox 19, Chrome 20, Safari 6, Opera 15, iOS Safari 6.0-6.1, Android Browser 4.4, Blackberry Browser 10, IE Mobile 10"
+  },
+  "contentsecuritypolicy": {
+    "title": "Content Security Policy",
+    "description": "Mitigate cross-site scripting attacks by whitelisting allowed sources of script, style, and other resources.",
+    "status": "Candidate Recommendation",
+    "support": "IE 10*, Firefox 4*, Chrome 14*, Safari 6*, Opera 15, iOS Safari 5.0-5.1*, Android Browser 4.4, Blackberry Browser 10*, Firefox for Android 0*, IE Mobile 10*"
+  },
+  "pagevisibility": {
+    "title": "Page Visibility",
+    "description": "JavaScript API for determining whether a document is visible on the display",
+    "status": "Recommendation",
+    "support": "IE 10, Firefox 10*, Chrome 14*, Safari 7, Opera 15*, iOS Safari 7.0, Android Browser 4.4*, Blackberry Browser 10*, Opera Mobile 0*, IE Mobile 10"
+  },
+  "stricttransportsecurity": {
+    "title": "Strict Transport Security",
+    "description": "Declare that a website is only accessible over a secure connection (HTTPS).",
+    "status": "Other",
+    "support": "Firefox 4, Chrome 4, Safari 7, Opera 12, Android Browser 4.4"
+  },
+  "style-scoped": {
+    "title": "Scoped CSS",
+    "description": "Allows CSS rules to be scoped to part of the document, based on the position of the style element.",
+    "status": "Candidate Recommendation",
+    "support": "Firefox 21"
+  },
+  "svg-fragment": {
+    "title": "SVG fragment identifiers",
+    "description": "Method of displaying only a part of an SVG image by defining a view ID or view box dimensions as the file's fragment identifier.",
+    "status": "Recommendation",
+    "support": "IE 10, Firefox 15, Blackberry Browser 10, IE Mobile 10"
+  },
+  "outline": {
+    "title": "CSS outline",
+    "description": "The CSS outline property is a shorthand property for setting one or more of the individual outline properties outline-style, outline-width and outline-color in a single rule. In most cases the use of this shortcut is preferable and more convenient.",
+    "status": "Recommendation",
+    "support": "IE 8, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "download": {
+    "title": "Download attribute",
+    "description": "When used on an anchor, this attribute signifies that the resource it points to should be downloaded by the browser rather than navigate to it.",
+    "status": "Working Draft",
+    "support": "Firefox 20, Chrome 14, Opera 15, Android Browser 4.4, Blackberry Browser 10"
+  },
+  "pointer": {
+    "title": "Pointer events",
+    "description": "This specification integrates various inputs from mice, touchscreens, and pens, making separate implementations no longer necessary and authoring for cross-device pointers easier. Not to be mistaken with the unrelated \"pointer-events\" CSS property.",
+    "status": "Candidate Recommendation",
+    "support": "IE 10*, Firefox 6, Chrome 22, Opera 15, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10*"
+  },
+  "user-select-none": {
+    "title": "CSS user-select: none",
+    "description": "Method of preventing text/element selection using CSS. ",
+    "status": "Unofficial / Note",
+    "support": "IE 10*, Firefox 2*, Chrome 6*, Safari 4*, Opera 15*, iOS Safari 3.2*, Android Browser 3*, Blackberry Browser 7*, Opera Mobile 0*, Chrome for Android 0*, Firefox for Android 0*, IE Mobile 10*"
+  },
+  "webp": {
+    "title": "WebP image format",
+    "description": "Image format that supports lossy and lossless compression, as well as animation and alpha transparency.",
+    "status": "Other",
+    "support": "Firefox 4, Chrome 6, Opera 11, Android Browser 4"
+  },
+  "intrinsic-width": {
+    "title": "Intrinsic & Extrinsic Sizing",
+    "description": "Allows for the heights and widths to be specified in intrinsic values using the fill-available, max-content, min-content, and fit-content properties.",
+    "status": "Working Draft",
+    "support": "Firefox 4*, Chrome 22*, Safari 7*, Opera 15*, iOS Safari 7.0*, Android Browser 4.4*, Blackberry Browser 10*, Opera Mobile 0*, Chrome for Android 0*, Firefox for Android 0*"
+  },
+  "template": {
+    "title": "HTML templates",
+    "description": "Method of declaring a portion of reusable markup that is parsed but not rendered until cloned.",
+    "status": "Working Draft",
+    "support": "Firefox 22, Chrome 26, Opera 15, Android Browser 4.4"
+  },
+  "opus": {
+    "title": "Opus",
+    "description": "Royalty-free open audio codec by IETF, which incorporated SILK from Skype and CELT from Xiph.org, to serve higher sound quality and lower latency at the same bitrate.",
+    "status": "Other",
+    "support": "Firefox 15, Chrome 33, Opera 20"
+  },
+  "jpegxr": {
+    "title": "JPEG XR image format",
+    "description": "The latest JPEG image format of Joint Photographic Experts Group which boasts better compression and supports lossless compression, alpha channel, and 48-bit deep color over normal jpg format.",
+    "status": "Other",
+    "support": "IE 9, IE Mobile 10"
+  },
+  "channel-messaging": {
+    "title": "Channel messaging",
+    "description": "Method for having two-way communication between browsing contexts (using MessageChannel)",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Chrome 4, Safari 5, Opera 11, iOS Safari 5.0-5.1, Android Browser 4.4, Blackberry Browser 7, IE Mobile 10"
+  },
+  "css3-tabsize": {
+    "title": "CSS3 tab-size",
+    "description": "Method of customizing the width of the tab character. Only effective using 'white-space: pre' or 'white-space: pre-wrap'.",
+    "status": "Working Draft",
+    "support": "Firefox 4*, Chrome 21, Safari 7, Opera 11*, iOS Safari 7.0, Android Browser 4.4, Blackberry Browser 7, Firefox for Android 0*"
+  },
+  "mutationobserver": {
+    "title": "Mutation Observer",
+    "description": "Method for observing and reacting to changes to the DOM. Replaces MutationEvents, which is deprecated.",
+    "status": "Working Draft",
+    "support": "IE 9, Firefox 14, Chrome 18*, Safari 6*, Opera 15, iOS Safari 6.0-6.1*, Android Browser 4, Blackberry Browser 10*, IE Mobile 10"
+  },
+  "css-selection": {
+    "title": "::selection CSS pseudo-element",
+    "description": "The ::selection CSS pseudo-element applies rules to the portion of a document that has been highlighted (e.g., selected with the mouse or another pointing device) by the user.",
+    "status": "Unofficial / Note",
+    "support": "IE 9, Firefox 2*, Chrome 4, Safari 4, Opera 11, Android Browser 4.4, IE Mobile 10"
+  },
+  "canvas-blending": {
+    "title": "Canvas blend modes",
+    "description": "Method of defining the effect resulting from overlaying two layers on a Canvas element. ",
+    "status": "Working Draft",
+    "support": "Firefox 20, Chrome 30, Safari 7, Opera 17, iOS Safari 7.0, Android Browser 4.4"
+  },
+  "clipboard": {
+    "title": "Clipboard API",
+    "description": "API to provide copy, cut and paste functionality using the OS clipboard.",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 22, Chrome 13, Safari 4, Opera 16, iOS Safari 5.0-5.1, Android Browser 4.4, Blackberry Browser 10"
+  },
+  "rtcpeerconnection": {
+    "title": "WebRTC Peer-to-peer connections",
+    "description": "Method of allowing two users to communicate directly, browser to browser using the RTCPeerConnection API.",
+    "status": "Working Draft",
+    "support": "Firefox 22*, Chrome 23*, Opera 18*, Opera Mobile 0*, Chrome for Android 0*, Firefox for Android 0*"
+  },
+  "css3-cursors": {
+    "title": "CSS3 Cursors (original values)",
+    "description": "CSS3 cursor values added in the 2004 spec, including none, context-menu, cell, vertical-text, alias, copy, no-drop, not-allowed, nesw-resize, nwse-resize, col-resize, row-resize and all-scroll. ",
+    "status": "Working Draft",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9"
+  },
+  "webvtt": {
+    "title": "WebVTT - Web Video Text Tracks",
+    "description": "Format for marking up text captions for multimedia resources.",
+    "status": "Unofficial / Note",
+    "support": "IE 10, Firefox 31, Chrome 18, Safari 6, Opera 15, iOS Safari 7.0, Android Browser 4.4, Blackberry Browser 10"
+  },
+  "promises": {
+    "title": "Promises",
+    "description": "A promise represents the eventual result of an asynchronous operation.",
+    "status": "Other",
+    "support": "IE 6, Firefox 2, Chrome 4, Safari 4, Opera 9, iOS Safari 3.2, Opera Mini 5.0-7.0, Android Browser 3, Blackberry Browser 7, IE Mobile 10"
+  },
+  "css-sticky": {
+    "title": "CSS position:sticky",
+    "description": "Keeps elements positioned as \"fixed\" or \"relative\" depending on how it appears in the viewport. As a result the element is \"stuck\" when necessary while scrolling.",
+    "status": "Unofficial / Note",
+    "support": "Firefox 30, Safari 7*, iOS Safari 6.0-6.1*"
+  },
+  "css-variables": {
+    "title": "CSS Variables",
+    "description": "Permits the declaration and usage of cascading variables in stylesheets.",
+    "status": "Working Draft",
+    "support": "Firefox 31"
+  },
+  "vibration": {
+    "title": "Vibration API",
+    "description": "Method to access the vibration mechanism of the hosting device.",
+    "status": "Working Draft",
+    "support": "Firefox 11*, Chrome 30, Opera 17, Android Browser 4.4, Blackberry Browser 10"
+  },
+  "css-backgroundblendmode": {
+    "title": "Blending of CSS image",
+    "description": "Allows blending between CSS background images",
+    "status": "Candidate Recommendation",
+    "support": "Firefox 30, Chrome 35, Safari 6.1"
+  },
+  "web-speech": {
+    "title": "Web Speech API",
+    "description": "Method to provide speech input and text-to-speech output features in a web browser.",
+    "status": "Unofficial / Note",
+    "support": "Chrome 25*, Safari 7*, iOS Safari 7.0*, Chrome for Android 0*"
+  },
+  "high-resolution-time": {
+    "title": "High Resolution Time API",
+    "description": "Method to provide the current time in sub-millisecond resolution and such that it is not subject to system clock skew or adjustments. Called using performance.now()",
+    "status": "Recommendation",
+    "support": "IE 10, Firefox 15, Chrome 20*, Opera 15, Android Browser 4.4, Blackberry Browser 10, IE Mobile 10"
+  },
+  "battery-status": {
+    "title": "Battery Status API",
+    "description": "Method to provide information about the battery status of the hosting device.",
+    "status": "Candidate Recommendation",
+    "support": "Firefox 16"
+  },
+  "user-timing": {
+    "title": "User Timing API",
+    "description": "Method to help web developers measure the performance of their applications by giving them access to high precision timestamps.",
+    "status": "Recommendation",
+    "support": "IE 10, Chrome 25, Opera 15, Android Browser 4.4, IE Mobile 10"
+  },
+  "srcset": {
+    "title": "Srcset attribute",
+    "description": "Allows authors to specify alternate high-resolution sources on `img` elements",
+    "status": "Other",
+    "support": "Chrome 34"
+  }
+}
