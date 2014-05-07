@@ -1,4 +1,5 @@
-# Extract feature infos from caniuse _data.json_
+# Get caniuse feature infos
 
-Copy _data.json_ from gitbub:
-Url: https://raw.githubusercontent.com/Fyrd/caniuse/master/data.json
+1. Grab newest _data.json_ file from github: https://raw.githubusercontent.com/Fyrd/caniuse/master/data.json
+2. ```$ node ./extract```
+3. Results: caniuseInfos.json
