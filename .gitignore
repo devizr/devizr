@@ -8,5 +8,8 @@
 # NodeJS
 node_modules
 
+# external data
+build/caniuse/data.json
+
 # Gulp
 # gulpfile.js
