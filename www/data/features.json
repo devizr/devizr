@@ -406,9 +406,128 @@
     "source": "?"
   },
   "RETINA": {
-    "title": "Detect Retina Display",
+    "title": "Is Retina Display",
     "description": "",
-    "status": "none",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "MACOS": {
+    "title": "Is Mac OS",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "WINDOWS": {
+    "title": "Is Windows OS",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "LINUX": {
+    "title": "Is Linux OS",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "BSD": {
+    "title": "Is BSD OS",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "ANDROID": {
+    "title": "Is Android OS",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "BLACKBERRY": {
+    "title": "Is Blackbeery OS",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "IOS": {
+    "title": "Is iOS",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "FIREFOXOS": {
+    "title": "Is Firefox OS",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "CHROMEOS": {
+    "title": "Is Chrome OS",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "UBUNTUTOUCH": {
+    "title": "Is Uunto Touch OS",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "GNUOS": {
+    "title": "Is GNU OS",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "WEBOS": {
+    "title": "Is webOS",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "SOLARIS": {
+    "title": "Is Solaris OS",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "SYMBIAN": {
+    "title": "Is Symbian OS",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "XBOX": {
+    "title": "Is Xbox platform",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "WII": {
+    "title": "Is Wii platform",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": "?"
+  },
+  "JAVA": {
+    "title": "Is Java",
+    "description": "",
+    "status": "",
     "support": "",
     "source": "?"
   }

@@ -168,9 +168,112 @@
     "support": "Firefox 12, Firefox Mobile 12, Android Browser 2.2, Firefox OS 1.5"
   },
   "RETINA": {
-    "title": "Detect Retina Display",
+    "title": "Is Retina Display",
     "description": "",
-    "status": "none",
+    "status": "",
+    "support": ""
+  },
+  "MACOS": {
+    "title": "Is Mac OS",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "WINDOWS": {
+    "title": "Is Windows OS",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "LINUX": {
+    "title": "Is Linux OS",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "BSD": {
+    "title": "Is BSD OS",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "ANDROID": {
+    "title": "Is Android OS",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "BLACKBERRY": {
+    "title": "Is Blackbeery OS",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "IOS": {
+    "title": "Is iOS",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "FIREFOXOS": {
+    "title": "Is Firefox OS",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "CHROMEOS": {
+    "title": "Is Chrome OS",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "UBUNTUTOUCH": {
+    "title": "Is Uunto Touch OS",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "GNUOS": {
+    "title": "Is GNU OS",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "WEBOS": {
+    "title": "Is webOS",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "SOLARIS": {
+    "title": "Is Solaris OS",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "SYMBIAN": {
+    "title": "Is Symbian OS",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "XBOX": {
+    "title": "Is Xbox platform",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "WII": {
+    "title": "Is Wii platform",
+    "description": "",
+    "status": "",
+    "support": ""
+  },
+  "JAVA": {
+    "title": "Is Java",
+    "description": "",
+    "status": "",
     "support": ""
   }
+	
 }
