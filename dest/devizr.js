@@ -29,9 +29,7 @@
       
     tests = {
     
-      /*** 
-       * # Device related APIs
-      */
+      /*** Device related APIs **************************************************************/
     
       'fullscreen': function() {
         return test(window, 'fullScreen') || 
@@ -105,13 +103,11 @@
       'draganddrop': function() {
         return test(document.documentElement, 'draggable') && 
           test(document, 'ondrag') && 
-          test(document, 'ondrag');
+          test(document, 'ondrop');
       },
       
     
-      /*** 
-       * # Communication related APIs
-      */
+      /*** Communication related APIs *******************************************************/
     
       'online': function() {
         return test(navigator, 'onLine');
@@ -156,9 +152,7 @@
           'withCredentials' in new XMLHttpRequest();
       },
     
-      /*** 
-       * # Data related APIs
-      */
+      /*** Data related APIs ****************************************************************/
     
       'blobconstructor': function() {
         return test(window, 'Blob');
@@ -208,9 +202,7 @@
         // };    
       },
     
-      /*** 
-       * # User related APIs
-      */
+      /*** User related APIs ****************************************************************/
     
       'hashchange': function() {
         return test(window, 'onhashchange');
@@ -224,9 +216,7 @@
         return test(navigator, 'doNotTrack');
       },
     
-      /*** 
-       * # DOM related APIs
-      */
+      /*** DOM related APIs *****************************************************************/
     
       'mutationobserver': function() {
         return test(window, 'MutationObserver');
@@ -249,9 +239,7 @@
       },
     
     
-      /*** 
-       * # Graphic related APIs
-      */
+      /*** Graphic related APIs *************************************************************/
     
       'webgl': function() {
         return test(window, 'WebGLRenderingContext');
@@ -268,9 +256,7 @@
       },
     
     
-      /*** 
-       * # Audio related APIs
-      */
+      /*** Audio related APIs ***************************************************************/
     
       'webaudio': function() {
         return test(window, 'AudioContext', true);
@@ -282,9 +268,7 @@
       },
     
     
-      /*** 
-       * # Time related APIs
-      */
+      /*** Time related APIs ****************************************************************/
     
       'performanceapi': function() {
         return test(window, 'performance', true);
@@ -306,9 +290,7 @@
       },
     
     
-      /*** 
-       * # Scripting related APIs
-      */
+      /*** Scripting related APIs ***********************************************************/
     
       'worker': function() {
         return test(window, 'Worker');
@@ -325,10 +307,7 @@
       },
       
       
-      /*** 
-       * # Environment detection
-       * Experimental** (environment detection has a high rate of misuse).
-      */
+      /*** Environment detection (Experimental!) ********************************************/
       
       'MOBILE': function() {
         return (test('android') && test('mobile')) || 
@@ -352,19 +331,14 @@
       },
     
       'SLOWCONNECTION': function() {
-        var connection = (test(navigator, 'connection') && 
-          navigator.connection) || { type: 0 }; 
-        return connection.type == 3 || // connection.CELL_2G
-          connection.type == 4 || // connection.CELL_3G
-          /^[23]g$/.test(connection.type); // string value in new spec
+        var connection = (test(navigator, 'connection') &&  navigator.connection) || { type: 0 }; 
+        return connection.type == 3 || connection.type == 4 || /^[23]g$/.test(connection.type);
       },
       
       'RETINA': function() {
-        return window.devicePixelRatio > 1 || 
-          (window.matchMedia && window.matchMedia(
-            "(-webkit-min-device-pixel-ratio: 1.5)," + 
-            "(-moz-min-device-pixel-ratio: 1.5)," + 
-            "(min-device-pixel-ratio: 1.5)").matches);
+        return window.devicePixelRatio > 1 || (window.matchMedia && window.matchMedia(
+            "(-webkit-min-device-pixel-ratio: 1.5),(-moz-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)").matches
+    			);
       },
       
       'MACOS': function() {
@@ -377,10 +351,8 @@
     
       'LINUX': function() {
         return test('linux') &&
-          (
-            test('debian|fedora|ubuntu|gentoo|red hat|suse|arch|centos') || 
-            test('slackware|mint|midori|kanotix|linspire|maemo|mageia|mandriva')
-          );
+          (test('debian|fedora|ubuntu|gentoo|red hat|suse|arch|centos') || 
+          test('slackware|mint|midori|kanotix|linspire|maemo|mageia|mandriva'));
       },
     
       'BSD': function() {
