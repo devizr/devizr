@@ -1,5 +1,5 @@
 /* jshint browser:true */
-/* global UglifyJS: true */
+/* global UglifyJS:true */
 
 var app, pkg, inputs, code, features_array, textarea, article, customFeatures, features;
 
@@ -15,7 +15,7 @@ function getTextFile(src, callback) {
 }
 
 function getIsotime() {
-	var d = new Date();
+  var d = new Date();
   return d.getUTCFullYear() + '-' + 
     (d.getUTCMonth() + 1) + '-' + 
     d.getUTCDate() + 'T' + 
@@ -98,11 +98,11 @@ function minifyCode(code) {
   var ast = UglifyJS.parse(code);
   var compressor = UglifyJS.Compressor();
   
-	// compress
-	ast.figure_out_scope();
+  // compress
+  ast.figure_out_scope();
   ast = ast.transform(compressor);
 
-	// mangle
+  // mangle
   ast.figure_out_scope();
   ast.compute_char_frequency();
   ast.mangle_names();
