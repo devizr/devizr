@@ -75,32 +75,32 @@ h2 input {
   left: -4px;
 }
 
-.expand div.info-wrapper {
+.collapse div.info-wrapper {
   margin: 0;
   border-radius: 0;
   border: none;
 }
-.expand section div:not(.name){
+.collapse section div:not(.name){
   padding: 2px 7px 0;
 }
-.expand section div h3,
-.expand section div input {
+.collapse section div h3,
+.collapse section div input {
   top: 1px;
   margin: 0;
   padding: 0;
 }
 
-.expand table,
-.expand p {
+.collapse table,
+.collapse p {
   display: none;    
 }
-.expand h3 {
+.collapse h3 {
   font-size: 1em;  
   border: none;  
   margin: 0;
 }
 
-.expand input {
+.collapse input {
   width: 1.6em;
   height: 1.6em;
   position: relative;
@@ -108,7 +108,7 @@ h2 input {
   left: 0;
 }
 
-.expand h2 input {
+.collapse h2 input {
   width: 2.1em;
   height: 2.1em;
   position: relative;

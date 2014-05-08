@@ -1,7 +1,7 @@
 /* jshint browser:true */
 /* global UglifyJS: true */
 
-var app, pkg, toggle = true;
+var app, pkg, inputs, code, features_array, textarea, article, customFeatures, features;
 
 function getTextFile(src, callback) {
   var http = new XMLHttpRequest();
@@ -14,42 +14,161 @@ function getTextFile(src, callback) {
   http.send();
 }
 
-function addCommentHeader(content, pkg) {
-  var isotime = new Date().getFullYear() + '-' + 
+function getIsotime() {
+  return new Date().getFullYear() + '-' + 
     new Date().getMonth() + '-' + 
     new Date().getDay() + 'T' + 
     new Date(new Date()).toLocaleTimeString();
+}
+
+function toggleFeatureInfos() {
+  article = document.querySelector('article');
+  if(article.className === "collapse") {
+    article.className = "expand";
+  } else {
+    article.className = "collapse";
+  }
+}
+
+function toggleCheckboxGroup() {
+  var id = 'wrapper_' + this.value,
+    i = 0, elem, hide;
+    
+  if(document.getElementById(id) !== null) {
+    elem = document.getElementById(id);
+    hide = !!~elem.className.indexOf('hide') ? 'hide ' : '';
+    if(this.checked) {
+      elem.className = hide + 'checked';
+    } else {
+      elem.className = hide + 'unchecked';
+    }
+  } else if(this.className === 'group'){
+    if(this.checked === false) {
+      for( ; i < inputs.length; i++) {
+        if(inputs[i].className === this.value) {
+          inputs[i].checked = false;
+        }
+      }
+    } else {
+      for( ; i < inputs.length; i++) {
+        if(inputs[i].className === this.value) {
+          inputs[i].checked = true;
+        }
+      }
+    }
+  }
+}
+
+function printWarning() {
+  textarea.innerHTML = '';
+  textarea.className = 'warning';
+  setTimeout(function(){
+    textarea.innerHTML = "" +
+      "Please select one or more features" + "\n" +
+      "and then push 'Generate'- button."
+;          
+  },500);
+}
+
+function printCode() {
+  textarea.className = 'normal';
+  textarea.innerHTML = code;
+}
+
+function getFeatureArray(content_array) {
+  var features_string, 
+    test_array = [], 
+    test_array_clean = [], 
+    test_string = content_array.join('').trim();
+    
+  test_array = test_string.split('\n');
+  test_array.forEach(function(line, index) {
+    if (index > 4 && index < test_array.length-1) {
+      test_array_clean.push(line.trim());
+    }
+  });
+  
+  features_string = test_array_clean.join('');
+  features_string = features_string.replace(/\},'/g, "}\n'");
+  return features_string.split('\n');
+}
+
+function minifyCode(code) {
+  // compressor needs figure_out_scope too
+  var ast = UglifyJS.parse(code);
+  ast.figure_out_scope();
+  
+  var compressor = UglifyJS.Compressor();
+  ast = ast.transform(compressor);
+
+  // need to figure out scope again so mangler works optimally
+  ast.figure_out_scope();
+  ast.compute_char_frequency();
+  ast.mangle_names();
+
+  // get Ugly code back :)
+  return ast.print_to_string();  
+}
+
+function addCommentHeader(code, pkg) {
+  var isotime = getIsotime();
   
   return '/*! devizr ' + pkg.version + ' | MIT & BSD' + '\n' +
     ' * ' + pkg.description + '\n' +
     ' * Custom Build ' + isotime + '\n' +
     ' * Copyright (c) 2013, ' + new Date().getFullYear() + ' Uli Preuss'  + '\n' +
     ' * ' + pkg.homepage + '\n' +
-    '*/\n' + content;
+    '*/\n' + code;
+}
+
+function prepareCode() {
+  var tests = 'tests = {\n  ' + customFeatures.join(',\n  ') + '\n};';
+  var code = app.replace(/\/\/\{\{DEVIZR-TESTS\}\}/i, tests);
+  code = code.replace(/\{\{VERSION\}\}/g, pkg.version);
+  code = minifyCode(code);  
+  return addCommentHeader(code, pkg);
+}
+
+function download() {
+  var generateButton = document.getElementById('generate');
+  generateButton.download="devizr." + pkg.version + ".custom.min.js";
+  generateButton.href = 'data:text/javascript;charset=utf-8,' + encodeURIComponent(code);      
+}
+      
+function addFeatures() {
+  for(var i = 0; i < inputs.length; i++) {
+    if(inputs[i].checked === true) {
+      for(var k = 0; k < features_array.length; k++) {
+        if(features_array[k].split("':")[0] === "'" + inputs[i].value) {
+          customFeatures.push(features_array[k]);
+          features.push(inputs[i].value);
+        }
+      }
+    }
+  }      
+}
+  
+function generate() {
+  customFeatures = [];
+  features = [];
+  textarea = document.querySelector('textarea');
+  
+  addFeatures();
+  
+  if(customFeatures.length === 0) {
+    printWarning();    
+  } else {
+    code = prepareCode(customFeatures);    
+    printCode(); 
+    download();        
+  }
+  
 }
 
 getTextFile('data/features.json', function(json_content) {
   
   var infos = JSON.parse(json_content);
-  
-  function getFeatureArray(content_array) {
-    var features_string, 
-      test_array = [], 
-      test_array_clean = [], 
-      test_string = content_array.join('').trim();
-      
-    test_array = test_string.split('\n');
-    test_array.forEach(function(line, index) {
-      if (index > 4 && index < test_array.length-1) {
-        test_array_clean.push(line.trim());
-      }
-    });
     
-    features_string = test_array_clean.join('');
-    features_string = features_string.replace(/\},'/g, "}\n'");
-    return features_string.split('\n');
-  }
-  
   getTextFile('../src/devizr.app.js', function(file_content) {
     app = file_content;
   });
@@ -61,7 +180,7 @@ getTextFile('data/features.json', function(json_content) {
   
   getTextFile('../src/devizr.tests.js', function(file_content) {
 
-    var lines, html, name, header, headerId, features_array,
+    var lines, html, name, header, headerId,
       comments = file_content.match(/(?:\/\*\*\*(?:[\s\S]*?)\*\/[^\*?\/':]*)/g),
       content_array = file_content.split(/(?:\/\*\*\*(?:[\s\S]*?)\*\/[^\*?\/':]*)/g);
     
@@ -129,105 +248,14 @@ getTextFile('data/features.json', function(json_content) {
 
     });
     
-    document.querySelector('a#toggle').addEventListener('click', function(){
-      var body = document.getElementsByTagName('body')[0];
-      if(toggle) {
-        toggle = false;
-        body.className = "expand";
-      } else {
-        toggle = true;
-        body.className = "collapse";
-      }
-    }, false);
+    document.querySelector('a#toggle').addEventListener('click', toggleFeatureInfos, false);
 
-    document.querySelector('a#generate').addEventListener('click', function(){
-      var textarea = document.querySelector('textarea');
-      var features_selected = [];
-      var features = [];
-      for(var i = 0; i < inputs.length; i++) {
-        if(inputs[i].checked === true) {
-          for(var k = 0; k < features_array.length; k++) {
-            if(features_array[k].split("':")[0] === "'" + inputs[i].value) {
-              features_selected.push(features_array[k]);
-              features.push(inputs[i].value);
-            }
-          }
-        }
-      }    
-      
-      if(features_selected.length === 0) {
-        textarea.innerHTML = '';
-        textarea.className = 'warning';
-        setTimeout(function(){
-          textarea.innerHTML = 'Please select one or more features';
-          textarea.innerHTML+= '\nand then push \'Generate\'- button.';          
-        },500);
-        
-      } else {
-        var tests = 'tests = {\n  ' + features_selected.join(',\n  ') + '\n};';
-        //var uriContent = "data:application/octet-stream," + encodeURIComponent(content);
-        //var newWindow = window.open(uriContent, 'downloadDocument');
-        
-        var content = app.replace(/\/\/\{\{DEVIZR-TESTS\}\}/i, tests);
-        
-        // compressor needs figure_out_scope too
-        var ast = UglifyJS.parse(content);
-        ast.figure_out_scope();
-        
-        var compressor = UglifyJS.Compressor({ 
-          //preserveComments: 'some' 
-        });
-        ast = ast.transform(compressor);
+    document.querySelector('a#generate').addEventListener('click', generate, false);
 
-        // need to figure out scope again so mangler works optimally
-        ast.figure_out_scope();
-        ast.compute_char_frequency();
-        ast.mangle_names();
-
-        // get Ugly code back :)
-        content = ast.print_to_string();  
-        
-        content = addCommentHeader(content, pkg);
-        
-        textarea.className = 'normal';
-        textarea.innerHTML = content;
-                  
-        var generateButton = document.getElementById('generate');
-        generateButton.download="devizr." + pkg.version + ".custom.min.js";
-        generateButton.href = 'data:text/javascript;charset=utf-8,' + encodeURIComponent(content);
-  
-      }
-          
-    }, false);
-
-    var inputs = document.getElementsByTagName('input');
+    inputs = document.getElementsByTagName('input');
+    
     for(var i = 0; i < inputs.length; i++) {
-      inputs[i].addEventListener('click', function(){
-        var id = 'wrapper_' + this.value;
-        if(document.getElementById(id) !== null) {
-          var hide = !!~document.getElementById(id).className.indexOf('hide') ? 'hide ' : '';
-          if(this.checked) {
-            document.getElementById(id).className = hide + 'checked';
-          } else {
-            document.getElementById(id).className = hide + 'unchecked';
-          }
-        } else if(this.className === 'group'){
-          if(this.checked === false) {
-            for(var k = 0; k < inputs.length; k++) {
-              if(inputs[k].className === this.value) {
-                inputs[k].checked = false;
-              }
-            }
-          } else {
-            for(var j = 0; j < inputs.length; j++) {
-              if(inputs[j].className === this.value) {
-                inputs[j].checked = true;
-              }
-            }
-            
-          }
-        }
-      }, false);
+      inputs[i].addEventListener('click', toggleCheckboxGroup, false);
     }
  
   });
