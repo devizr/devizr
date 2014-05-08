@@ -113,7 +113,7 @@ function minifyCode(code) {
 function addCommentHeader(code, pkg) {
   var isotime = getIsotime();
   
-  return '/*! devizr ' + pkg.version + ' | MIT & BSD' + '\n' +
+  return '/*! devizr ' + pkg.version + ' | MIT license' + '\n' +
     ' * ' + pkg.description + '\n' +
     ' * Custom Build ' + isotime + '\n' +
     ' * Copyright (c) 2013, ' + new Date().getFullYear() + ' Uli Preuss'  + '\n' +
