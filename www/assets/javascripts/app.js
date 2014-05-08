@@ -65,8 +65,7 @@ function printWarning() {
   setTimeout(function(){
     textarea.innerHTML = "" +
       "Please select one or more features" + "\n" +
-      "and then push 'Generate'- button."
-;          
+      "and then push 'Generate'- button.";          
   },500);
 }
 
