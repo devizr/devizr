@@ -15,10 +15,11 @@ function getTextFile(src, callback) {
 }
 
 function getIsotime() {
-  return new Date().getFullYear() + '-' + 
-    new Date().getMonth() + '-' + 
-    new Date().getDay() + 'T' + 
-    new Date(new Date()).toLocaleTimeString();
+	var d = new Date();
+  return d.getUTCFullYear() + '-' + 
+    (d.getUTCMonth() + 1) + '-' + 
+    d.getUTCDate() + 'T' + 
+    new Date(d).toLocaleTimeString();
 }
 
 function toggleFeatureInfos() {
@@ -147,7 +148,7 @@ function addFeatures() {
   }      
 }
   
-function generate() {
+function generateCode() {
   customFeatures = [];
   features = [];
   textarea = document.querySelector('textarea');
@@ -164,19 +165,19 @@ function generate() {
   
 }
 
+getTextFile('../src/devizr.app.js', function(file_content) {
+  app = file_content;
+});
+
+getTextFile('../package.json', function(file_content) {
+  pkg = JSON.parse(file_content);
+  document.querySelector('header span').innerHTML = pkg.version;
+});
+
 getTextFile('data/features.json', function(json_content) {
   
   var infos = JSON.parse(json_content);
     
-  getTextFile('../src/devizr.app.js', function(file_content) {
-    app = file_content;
-  });
-  
-  getTextFile('../package.json', function(file_content) {
-    pkg = JSON.parse(file_content);
-    document.querySelector('header span').innerHTML = pkg.version;
-  });
-  
   getTextFile('../src/devizr.tests.js', function(file_content) {
 
     var lines, html, name, header, headerId,
@@ -249,7 +250,7 @@ getTextFile('data/features.json', function(json_content) {
     
     document.querySelector('a#toggle').addEventListener('click', toggleFeatureInfos, false);
 
-    document.querySelector('a#generate').addEventListener('click', generate, false);
+    document.querySelector('a#generate').addEventListener('click', generateCode, false);
 
     inputs = document.getElementsByTagName('input');
     
