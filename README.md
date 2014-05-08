@@ -23,13 +23,13 @@ Devizr
 #### Methods and Properties
 
 ##### init()
-Start detection
+Start feature detection
 ```js
 devizr.init();
 ```
 
 ##### load()
-Load breakpoint array
+Load assets 
 ```js
 devizr.load(BREAKPOINT_ARRAY);
 ```
@@ -140,6 +140,10 @@ devizr.addTest('contact-page', function(){
 
 ```js
 devizr.init();
+```
+
+```js
+devizr.load(breakpoints);
 ```
 
 ```js

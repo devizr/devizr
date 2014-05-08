@@ -94,19 +94,19 @@ function getFeatureArray(content_array) {
 }
 
 function minifyCode(code) {
-  // compressor needs figure_out_scope too
+
   var ast = UglifyJS.parse(code);
-  ast.figure_out_scope();
-  
   var compressor = UglifyJS.Compressor();
+  
+	// compress
+	ast.figure_out_scope();
   ast = ast.transform(compressor);
 
-  // need to figure out scope again so mangler works optimally
+	// mangle
   ast.figure_out_scope();
   ast.compute_char_frequency();
   ast.mangle_names();
 
-  // get Ugly code back :)
   return ast.print_to_string();  
 }
 
