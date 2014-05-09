@@ -1,12 +1,12 @@
+/*jshint node: true */
 "use strict";
 
-var pkg     = require('./package.json');
-var fs      = require('fs');
-
-var gulp    = require('gulp');
-var jshint  = require('gulp-jshint');
-var uglify  = require('gulp-uglify');
-var concat  = require('gulp-concat');
+var pkg = require('./package.json');
+var fs = require('fs');
+var gulp = require('gulp');
+var jshint = require('gulp-jshint');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
 var replace = require('gulp-replace');
 
 gulp.task('lint', function() {
@@ -41,9 +41,9 @@ gulp.task('build', function() {
     tests = lines_indent.join('\n');
     
     return gulp.src('./src/devizr.app.js')
-      .pipe(replace(/\/\/{{DEVIZR-TESTS}}/i, tests))
-      .pipe(replace(/{{VERSION}}/g, pkg.version))
-      .pipe(replace(/{{YEAR}}/g, new Date().getFullYear()))
+      .pipe(replace(/\/\/\{\{DEVIZR-TESTS\}\}/i, tests))
+      .pipe(replace(/\{\{VERSION\}\}/g, pkg.version))
+      .pipe(replace(/\{\{YEAR\}\}/g, new Date().getFullYear()))
       .pipe(concat('devizr.js'))
       .pipe(gulp.dest('dest'))
       .pipe(uglify({ preserveComments: 'some' }))
@@ -54,4 +54,4 @@ gulp.task('build', function() {
  
 });
 
-gulp.task('default', [ 'lint', 'build']);
+gulp.task('default', [ 'lint', 'build' ]);
