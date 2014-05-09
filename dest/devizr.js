@@ -83,21 +83,11 @@
         return test(navigator, 'getUserMedia', true);
       },
     
-      'contextmenu': function() {
-        return test(document.documentElement, 'contextMenu') && 
-          test(window, 'HTMLMenuItemElement');
-      },
-      
       'touch': function() {
         return test(window, 'ontouchstart') || 
           (test(navigator, 'MaxTouchPoints') && navigator.MaxTouchPoints > 0) || 
           (test(navigator, 'msMaxTouchPoints') && navigator.msMaxTouchPoints > 0) || 
           (test(window, 'DocumentTouch') && document instanceof DocumentTouch);
-      },
-    
-      'contenteditable': function() {
-        return test(document.documentElement, 'contenteditable') && 
-          test(window, 'HTMLMenuItemElement');
       },
     
       'draganddrop': function() {
@@ -306,9 +296,62 @@
           test(document, 'onafterscriptexecute');
       },
       
+      /*** HTML5 Elements & Attributes ******************************************************/
+    
+      'video': function() {
+        return test(window, 'HTMLVideoElement');
+      },
+      
+      'audio': function() {
+        return test(window, 'HTMLAudioElement');
+      },
+      
+      'picture': function() {
+        return test(window, 'HTMLPictureElement');
+      },
+      
+      'progressmeter': function() {
+        return test(window, 'HTMLProgressElement') && 
+    		  test('progress', 'max') &&
+          test(window, 'HTMLMeterElement') && 
+    			test('meter', 'max');
+      },
+    
+      'attrdownload': function() {
+        return test('a', 'download');
+      },
+      
+      'attrsandbox': function() {
+        return test('iframe', 'sandbox');
+      },
+      
+      'contextmenu': function() {
+        return test(document.documentElement, 'contextMenu') && 
+          test(window, 'HTMLMenuItemElement');
+      },
+      
+      'contenteditable': function() {
+        return test(document.documentElement, 'contenteditable') && 
+          test(window, 'HTMLMenuItemElement');
+      },
+         
       
       /*** Environment detection (Experimental!) ********************************************/
       
+      'SSL': function() {
+        return location.protocol === 'https:';
+      },
+      
+      'ES3': function() {
+        return (function(){ return !!this; }()) &&
+          !Function.prototype.bind;
+      },
+      
+      'ES5': function() {
+        return (function(){ return !this; }()) &&
+          Function.prototype.bind;
+      },
+        
       'MOBILE': function() {
         return (test('android') && test('mobile')) || 
           (test('blackberry') && test('mobile')) ||
@@ -338,10 +381,10 @@
       'RETINA': function() {
         return window.devicePixelRatio > 1 || (window.matchMedia && window.matchMedia(
             "(-webkit-min-device-pixel-ratio: 1.5),(-moz-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)").matches
-    			);
+          );
       },
-      
-      'MACOS': function() {
+     
+      'MACOSX': function() {
         return test('mac os|macos');
       },
     
@@ -442,6 +485,9 @@
       }
 
       function getIframeInterfaces(iface){
+			  if(typeof iface === 'string') {
+			  	return iframe.contentDocument.createElement(iface);
+			  }
         switch(iface){
         case window : return iframe.contentWindow;
         case document : return iframe.contentDocument;

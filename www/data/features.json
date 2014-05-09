@@ -377,6 +377,69 @@
     "support": "Chrome 29, Firefox 4, Opera 16, Firefox Mobile ?",
     "source": "MDN XXXXX "
   },
+  "video": {
+    "title": "Video element",
+    "description": "Method of playing videos on webpages (without requiring a plug-in)",
+    "status": "Working Draft",
+    "support": "IE 9, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 3.2, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "audio": {
+    "title": "Audio element",
+    "description": "Method of playing sound on webpages (without requiring a plug-in)",
+    "status": "Working Draft",
+    "support": "IE 9, Firefox 4, Chrome 4, Safari 4, Opera 11, iOS Safari 4.0-4.1, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "progressmeter": {
+    "title": "Progress & Meter",
+    "description": "Method of indicating a progress state (progress element) or the current level of a gauge (meter element).\r\n",
+    "status": "Working Draft",
+    "support": "IE 10, Firefox 6, Chrome 8, Safari 6, Opera 11, iOS Safari 7.0, Android Browser 4.4, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
+  "picture": {
+    "title": "Picture element",
+    "description": "An HTML extension for adaptive images",
+    "status": "Working Draft",
+    "support": "none",
+    "source": "http://www.w3.org/TR/html-picture-element/"
+  },
+  "SSL": {
+    "title": "Detect secure connection",
+    "description": "",
+    "status": "",
+    "support": "",
+    "source": ""
+  },
+  "ES5": {
+    "title": "Supports ECMAScript 5",
+    "description": "True, if supports Strict Mode and bind() method.",
+    "status": "ECMA-262 Edition 5.1",
+    "support": "Chrome 19, IE 9, Firefox 4, Safari 5.1.4, Opera 12.10",
+    "source": "http://kangax.github.io/compat-table/es5/"
+  },
+  "ES3": {
+    "title": "Supports only ECMAScript 3",
+    "description": "Means: not fully supported ECMAScript 5. True, if not supports Strict Mode (e.g IE9) and bind() method (e.g. Safari 5.1)",
+    "status": "ECMA-262 Edition 3",
+    "support": "Chrome < 19, IE < 9, Firefox < 4, Safari < 5.1.4, Opera < 12.10",
+    "source": "http://kangax.github.io/compat-table/es5/"
+  },
+  "attrdownload": {
+    "title": "Download attribute",
+    "description": "When used on an anchor, this attribute signifies that the resource it points to should be downloaded by the browser rather than navigate to it.",
+    "status": "Working Draft",
+    "support": "Firefox 20, Chrome 14, Opera 15, Android Browser 4.4, Blackberry Browser 10",
+    "source": "caniuse.com"
+  },
+  "attrsandbox": {
+    "title": "sandbox attribute for iframes",
+    "description": "Method of running external site pages with reduced privileges (e.g. no JavaScript) in iframes",
+    "status": "Candidate Recommendation",
+    "support": "IE 10, Firefox 17, Chrome 4, Safari 5, Opera 15, iOS Safari 4.2-4.3, Android Browser 3, Blackberry Browser 7, IE Mobile 10",
+    "source": "caniuse.com"
+  },
   "MOBILE": {
     "title": "Is mobile device (smartphone)",
     "description": "EXPERIMENTAL!",
