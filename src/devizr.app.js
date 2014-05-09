@@ -56,6 +56,9 @@
       }
 
       function getIframeInterfaces(iface){
+			  if(typeof iface === 'string') {
+			  	return iframe.contentDocument.createElement(iface);
+			  }
         switch(iface){
         case window : return iframe.contentWindow;
         case document : return iframe.contentDocument;
