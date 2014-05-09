@@ -24,8 +24,7 @@ article {
     border-bottom-right-radius: 3px;
     padding: 0px 30px;
 }
-a#toggle,
-a#generate {
+nav a {
   position: absolute;
   top: 7px;
   cursor: pointer;
@@ -37,15 +36,18 @@ a#generate {
   color: #666;
   font-size: 0.8em;
 }
-a#toggle:active,
-a#generate:active {
+nav a:active {
   background: #ddd;
 }
-a#toggle {
-  right: 10px;
+
+a#toggle-infos {
+  right: 249px;
+}
+a#toggle-selection {
+  right: 124px;
 }
 a#generate {
-  right: 112px;
+  right: 10px;
 }
 
 div.info-wrapper {
@@ -79,6 +81,7 @@ h2 input {
   margin: 0;
   border-radius: 0;
   border: none;
+	padding: 0;
 }
 .collapse section div:not(.name){
   padding: 2px 7px 0;
@@ -88,6 +91,10 @@ h2 input {
   top: 1px;
   margin: 0;
   padding: 0;
+}
+
+.collapse label:hover {
+  color: darkblue;
 }
 
 .collapse table,
@@ -126,7 +133,8 @@ div textarea {
   border: 3px solid #aaa;
   padding: 10px 8px;
   font-family: "proxima-nova-1","proxima-nova-2", Helmet, Freesans, sans-serif !important;
-  background-image: url(../images/bg_stripes.jpg);
+  background-color: #f8f8f8;
+  /*background-image: url(../images/bg_stripes.jpg);*/
   background-repeat: repeat;
   border-radius: 3px;
   box-shadow: inset 0 0 3px #999;
@@ -139,7 +147,7 @@ div textarea {
 }
 
 div textarea.normal {
-  color: #036;
+  color: #999;
   text-align:left;
   padding: 10px 8px;
   font-size: 1.1em;
@@ -334,6 +342,7 @@ table tr th {
 table tr td {
   border: 1px solid #cccccc;
   text-align: left;
+  vertical-align: top;
   margin: 0;
   padding: 6px 13px;
 }

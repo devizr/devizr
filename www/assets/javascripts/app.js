@@ -1,7 +1,7 @@
 /* jshint browser:true */
 /* global UglifyJS:true */
 
-var app, pkg, inputs, code, features_array, textarea, article, customFeatures, features;
+var app, pkg, inputs, code, features_array, textarea, customFeatures, features;
 
 function getTextFile(src, callback) {
   var http = new XMLHttpRequest();
@@ -23,11 +23,28 @@ function getIsotime() {
 }
 
 function toggleFeatureInfos() {
-  article = document.querySelector('article');
+  var article = document.querySelector('article');
   if(article.className === "collapse") {
     article.className = "expand";
   } else {
     article.className = "collapse";
+  }
+}
+
+function toggleFeatureSelection() {
+  var section = document.querySelector('section');
+  var checkboxes = document.querySelectorAll('input[value][type="checkbox"]');
+	var i;
+  if(section.className === "allselect") {
+    for(i = 0; i < checkboxes.length; i++) {
+      checkboxes[i].checked = false;  
+    }
+    section.className = "noselect";
+  } else {
+    for(i = 0; i < checkboxes.length; i++) {
+      checkboxes[i].checked = true;  
+    }
+    section.className = "allselect";
   }
 }
 
@@ -198,10 +215,11 @@ getTextFile('data/features.json', function(json_content) {
       header = header.replace(/\*|\//g, '').trim();
       headerId = header.replace(/ /g, '').toLowerCase();
       
-      html += '<h2>';
-      html += '<input type="checkbox" class="group" id="' + headerId + '" value="' + headerId + '">';
-      html += '<label for="' + headerId + '">' + header + '</label>';
-      html += '</h2>';
+      html += '' +
+      '<h2>' + '\n' + 
+      '<input type="checkbox" class="group" id="' + headerId + '" value="' + headerId + '">' + '\n' + 
+      '<label for="' + headerId + '">' + header + '</label>' + '\n' + 
+      '</h2>';
       
       lines = content.trim().split('\n');
 
@@ -215,9 +233,10 @@ getTextFile('data/features.json', function(json_content) {
           if(infos[name]) {
             var source = infos[name].source || '';
             if(!!~source.indexOf('caniuse')) {
+              var title = infos[name].title.replace(/ & |\(basic support\)/g, '').toLowerCase();
               source = '<a href="http://caniuse.com/#search=' + 
-                infos[name].title + '">http://caniuse.com/#search=' + 
-                infos[name].title + '</a>'; 
+                title + '">http://caniuse.com/#search=' + 
+                title + '</a>'; 
             } else if(!!~source.indexOf('MDN')) {
               source = source.replace(/MDN| /g, '');
               source = '<a href="https://developer.mozilla.org/en-US/search?q=' + 
@@ -225,19 +244,30 @@ getTextFile('data/features.json', function(json_content) {
                 source + '</a>'; 
             }
             html += '' +
-              '<div class="info-wrapper">' + '\n' + 
-              '<h3>' + '\n' + 
-              '<input type="checkbox" class="' + headerId + '" id="' + name + '" value="' + name + '">' + '\n' + 
-              '<label for="' + name + '">' + infos[name].title + '</label>' + '\n' + 
-              '</h3>' + '\n' + 
-              '<p>' + infos[name].description + '</p>' + '\n' + 
-              '<table>' + '\n' + 
-              '<tr><td><b>ID</b></td><td class="content">' + name + '</td></tr>' + '\n' + 
-              '<tr><td><b>Browser</b></td><td class="content">' + infos[name].support + '</td></tr>' + '\n' + 
-              '<tr><td><b>Status</b></td><td class="content">' + infos[name].status + '</td></tr>' + '\n' + 
-              '<tr><td><b>Source</b></td><td class="content">' + source + '</td></tr>' + '\n' + 
-              '</table>' + '\n' + 
-              '</div>';
+            '<div class="info-wrapper">' + '\n' + 
+            '<h3>' + '\n' + 
+            '<input type="checkbox" class="' + headerId + '" id="' + name + '" value="' + name + '">' + '\n' + 
+            '<label for="' + name + '">' + infos[name].title + '</label>' + '\n' + 
+            '</h3>' + '\n' + 
+            '<p>' + infos[name].description + '</p>' + '\n' + 
+            '<table>' + '\n' + 
+            '<tr><td><b>ID</b></td><td class="content">' + name + '</td></tr>' + '\n';
+          
+            var support = infos[name].support;
+            if(support && support !== '' && support !== '?' && support !== 'none') {
+              html += '<tr><td><b>Browser</b></td><td class="content">' + support + '</td></tr>' + '\n';               
+            }
+            var status = infos[name].status;
+            if(status && status !== '' && status !== '?' && status !== 'none') {
+              html += '<tr><td><b>Status</b></td><td class="content">' + status + '</td></tr>' + '\n';
+            }
+            if(source && source !== '' && source !== '?' && source !== 'none') {
+              html += '<tr><td><b>Source</b></td><td class="content">' + source + '</td></tr>' + '\n';
+            }
+
+            html += '' +
+            '</table>' + '\n' + 
+            '</div>';
           }
         }
         
@@ -248,7 +278,9 @@ getTextFile('data/features.json', function(json_content) {
 
     });
     
-    document.querySelector('a#toggle').addEventListener('click', toggleFeatureInfos, false);
+    document.querySelector('a#toggle-infos').addEventListener('click', toggleFeatureInfos, false);
+
+    document.querySelector('a#toggle-selection').addEventListener('click', toggleFeatureSelection, false);
 
     document.querySelector('a#generate').addEventListener('click', generateCode, false);
 
