@@ -12,6 +12,8 @@ node_modules
 build/caniuse/data.json
 
 # tests
+lib
+coverage
 test-results.xml
 
 # Gulp
