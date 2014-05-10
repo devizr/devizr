@@ -11,5 +11,8 @@ node_modules
 # external data
 build/caniuse/data.json
 
+# tests
+test-results.xml
+
 # Gulp
-# gulpfile.js
+gulpfile.js
