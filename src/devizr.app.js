@@ -23,7 +23,7 @@
     var viewport = { width: window.innerWidth, height: window.innerHeight },
       stylesLoaded = false, 
       support = [],
-			env = [],
+      env = [],
       cache = [],
       test, tests = {};
       
@@ -56,9 +56,9 @@
       }
 
       function getIframeInterfaces(iface){
-			  if(typeof iface === 'string') {
-			  	return iframe.contentDocument.createElement(iface);
-			  }
+        if(typeof iface === 'string') {
+          return iframe.contentDocument.createElement(iface);
+        }
         switch(iface){
         case window : return iframe.contentWindow;
         case document : return iframe.contentDocument;
@@ -71,12 +71,12 @@
       test = function(iface, prop, prefixed){
         
         var i, prefixedProp, result = false,
-				    re, useragent = window.navigator.userAgent.toLowerCase();
+            re, useragent = window.navigator.userAgent.toLowerCase();
 
         if(arguments.length === 1) {
 
-					re = new RegExp(arguments[0], 'i');
-			    return re.test(useragent);
+          re = new RegExp(arguments[0], 'i');
+          return re.test(useragent);
         
         } else {
         
@@ -103,11 +103,11 @@
       for(var name in tests) {
         if(typeof tests[name] === 'function') {
           if(tests[name]()) {
-						if(name === name.toUpperCase()) {
-	            env.push(name);				
-						} else {
-	            support.push(name);				
-						}
+            if(name === name.toUpperCase()) {
+              env.push(name);        
+            } else {
+              support.push(name);        
+            }
           }
         }
         else {
@@ -260,7 +260,7 @@
       version: '{{VERSION}}',
       load : preCheck,
       support: support,
-			env: env,
+      env: env,
       supports: supports,
       tests: tests,
       cache : cache,
@@ -271,7 +271,6 @@
   }());
 
   if (typeof define === 'function' && define.amd) {
-    //define(['Modernizr'], function() {
     define([], function() {
       return devizr;
     });

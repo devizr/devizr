@@ -44,10 +44,10 @@ gulp.task('build', function() {
       .pipe(replace(/\/\/\{\{DEVIZR-TESTS\}\}/i, tests))
       .pipe(replace(/\{\{VERSION\}\}/g, pkg.version))
       .pipe(replace(/\{\{YEAR\}\}/g, new Date().getFullYear()))
-      .pipe(concat('devizr.js'))
+      .pipe(concat('devizr.default.js'))
       .pipe(gulp.dest('dest'))
       .pipe(uglify({ preserveComments: 'some' }))
-      .pipe(concat('devizr.min.js'))
+      .pipe(concat('devizr.default.min.js'))
       .pipe(gulp.dest('dest'));
   
   });
