@@ -312,9 +312,9 @@
       
       'progressmeter': function() {
         return test(window, 'HTMLProgressElement') && 
-    		  test('progress', 'max') &&
+          test('progress', 'max') &&
           test(window, 'HTMLMeterElement') && 
-    			test('meter', 'max');
+          test('meter', 'max');
       },
     
       'attrdownload': function() {
@@ -380,8 +380,8 @@
       
       'RETINA': function() {
         return window.devicePixelRatio > 1 || (window.matchMedia && window.matchMedia(
-            "(-webkit-min-device-pixel-ratio: 1.5),(-moz-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)").matches
-          );
+          "(-webkit-min-device-pixel-ratio: 1.5),(-moz-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)").matches
+        );
       },
      
       'MACOSX': function() {
