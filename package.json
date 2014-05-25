@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/up/devizr/issues"
   },
-  "homepage": "https://github.com/up/devizr",
+  "homepage": "http://devizr.net",
   "devDependencies": {
     "gulp-jasmine": "^0.2.0"
   },
