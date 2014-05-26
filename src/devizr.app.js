@@ -1,5 +1,6 @@
 /*!
  * devizr asset manager {{VERSION}}
+ * http://devizr.net
  * Copyright (c) 2013, {{YEAR}} Uli Preuss
  * https://raw.githubusercontent.com/up/devizr/master/LICENSE
  */
