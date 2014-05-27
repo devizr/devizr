@@ -10,22 +10,22 @@ describe("devizr", function() {
   describe("test", function() {
     
     it("supports touch", function() {
-      expect(devizr.supports('touch')).toEqual(false);
+      expect(devizr.feature('touch')).toEqual(false);
     });
     
     it("supports hashchange", function() {
-      expect(devizr.supports('hashchange')).toEqual(true);
+      expect(devizr.feature('hashchange')).toEqual(true);
     });
     
   });
   
   describe("test", function() {
     
-    it("devizr.supports('fullscreen') returns a boolean", function() {
+    it("devizr.feature('fullscreen') returns a boolean", function() {
       // Moz only:
         if (typeof document.mozFullScreen !== 'undefined'){
 
-          expect(devizr.supports('fullscreen')).toBool;
+          expect(devizr.feature('fullscreen')).toBool;
           
         }
       

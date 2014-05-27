@@ -1,15 +1,8 @@
 /*!
- * devizr 0.5.2
- * Device asset manager and JS feature detector
+ * devizr asset manager 0.5.2
+ * http://devizr.net
  * Copyright (c) 2013, 2014 Uli Preuss
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
+ * https://raw.githubusercontent.com/up/devizr/master/LICENSE
  */
 
 /*jshint browser:true */
@@ -365,7 +358,7 @@
       },
       
       'TABLET': function() {
-        return (!test('MOBILE') && devizr.supports('touch')) ||
+        return (!test('MOBILE') && devizr.feature('touch')) ||
           test('tablet|kindle|silk|ipad');  
       },
     
@@ -688,9 +681,9 @@
     return {
       version: '0.5.2',
       load : preCheck,
-      support: support,
+      features: support,
       env: env,
-      supports: supports,
+      feature: supports,
       tests: tests,
       cache : cache,
       addTest: addTest,

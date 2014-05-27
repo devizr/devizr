@@ -340,7 +340,7 @@ tests = {
   },
   
   'TABLET': function() {
-    return (!test('MOBILE') && devizr.supports('touch')) ||
+    return (!test('MOBILE') && devizr.feature('touch')) ||
       test('tablet|kindle|silk|ipad');  
   },
 

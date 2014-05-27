@@ -252,9 +252,9 @@
     return {
       version: '{{VERSION}}',
       load : preCheck,
-      support: support,
+      features: support,
       env: env,
-      supports: supports,
+      feature: supports,
       tests: tests,
       cache : cache,
       addTest: addTest,
