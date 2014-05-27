@@ -42,18 +42,18 @@ devizr.addTest(ID, function(){
 });
 ```
 
-##### supports()
+##### feature()
 Get feature (for inline usage)
 ```js
-if(devizr.supports(FEATURE)) {
+if(devizr.feature(FEATURE)) {
   // Do somthing ..
 }
 ```
 
-##### support
+##### features
 Get supported features as an array
 ```js
-console.log(devizr.support);
+console.log(devizr.features);
 ```
 
 #### Configuration
@@ -147,11 +147,11 @@ devizr.load(breakpoints);
 ```
 
 ```js
-if(devizr.supports('touch')) {
+if(devizr.feature('touch')) {
   console.log('Hi from touch device!');
 }
 ```
 
 ```js
-console.log(devizr.support);
+console.log(devizr.features);
 ```
