@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/up/devizr.git"
+    "url": "git://github.com/devizr/devizr.git"
   },
   "keywords": [
     "device",
@@ -18,7 +18,7 @@
   "author": "Uli Preuss",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/up/devizr/issues"
+    "url": "https://github.com/devizr/devizr/issues"
   },
   "homepage": "http://devizr.net",
   "devDependencies": {
