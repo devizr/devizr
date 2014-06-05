@@ -45,7 +45,7 @@ devizr.addTest(ID, function(){
 ##### feature()
 Get feature (for inline usage)
 ```js
-if(devizr.feature(FEATURE)) {
+if(devizr.feature(FEATURE-ID)) {
   // Do somthing ..
 }
 ```
