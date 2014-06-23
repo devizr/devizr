@@ -328,12 +328,12 @@ tests = {
   },
     
   'MOBILE': function() {
-    return (test('android') && test('mobile')) || 
-      (test('blackberry') && test('mobile')) ||
+    return (test('android|blackberry') && test('mobile')) ||
       (test('firefox') && test('fennec')) ||
       (test('windows') && test('phone')) ||
       (test('opera') && test('presto')) ||
       (test('netfront') && !test('kindle')) ||
+      (test('kindle|silk|kfot|kftt|kfjwi|kfjwa') && test('mobile')) ||
       test('iphone|ipod|meego|webos|iemobile') || 
       test('symbianos|doris|dorothy|gobrowser|maemo|minimo') || 
       test('semc-browser|skyfire|teashark|teleca|uzardweb');
