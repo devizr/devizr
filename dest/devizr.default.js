@@ -112,7 +112,6 @@
     
       'rtcpeerconnection': function() {
         return test(window, 'RTCPeerConnection', true);
-        //return test(navigator, 'connection');
       },
     
       'notification': function() {
@@ -137,7 +136,7 @@
           'withCredentials' in new XMLHttpRequest();
       },
       
-      'beacon': function() {
+      'sendbeacon': function() {
         return test(navigator, "sendBeacon");
       },
     
