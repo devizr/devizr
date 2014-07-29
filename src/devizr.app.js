@@ -18,6 +18,7 @@
       support = [],
       env = [],
       cache = [],
+      vendor = [],
       test, tests = {};
       
 //{{DEVIZR-TESTS}}
@@ -33,6 +34,10 @@
       tests[id] = test_fn;
     }
     
+    function resolve(string) {
+      return vendor[string.toLowerCase()];
+    }
+
     function detectJSFeaturesInIframe() {
     
       var prefixes = ["moz", "Moz", "webkit", "WebKit", "ms", "MS", "o", "O"],
@@ -63,16 +68,20 @@
 
       test = function(iface, prop, prefixed){
         
-        var i, prefixedProp, result = false,
+        var i, prefixedProp, propertyName, result = false,
             re, useragent = window.navigator.userAgent.toLowerCase();
 
         if(arguments.length === 1) {
-
-          re = new RegExp(arguments[0], 'i');
-          return re.test(useragent);
+          
+          if(typeof arguments[0] === 'boolean') {
+            return arguments[0];
+          } else if(typeof arguments[0] === 'string') {
+            re = new RegExp(arguments[0], 'i');
+            return re.test(useragent);
+          }
         
         } else {
-        
+                
           iface = getIframeInterfaces(iface);
 
           if(prefixed) {
@@ -80,14 +89,18 @@
               prefixedProp = prefixes[i] + capitaliseFirstLetter(prop);
               if( prefixedProp in iface) {
                 result = true;
+                propertyName = prefixedProp;
               }
             }    
           }
     
           if(prop in iface) {
             result = true;
+            propertyName = prop;
           }
-    
+          
+          vendor[prop.toLowerCase()] = propertyName;
+          
           return result;
         }
               
@@ -253,10 +266,12 @@
       version: '{{VERSION}}',
       load : preCheck,
       features: support,
-      env: env,
       feature: supports,
+      env: env,
       tests: tests,
       cache : cache,
+      resolve : resolve,
+      vendor : vendor,
       addTest: addTest,
       init: detectJSFeaturesInIframe
     };
@@ -270,7 +285,6 @@
   }
   else {
     window.devizr = devizr;
-    // init detection
   }
 
 }(window, document, navigator));

@@ -9,12 +9,16 @@ describe("devizr", function() {
   
   describe("test", function() {
     
-    it("supports touch", function() {
+    it("Browser don't supports touch events", function() {
       expect(devizr.feature('touch')).toEqual(false);
     });
     
-    it("supports hashchange", function() {
+    it("Browser supports 'hashchange' event", function() {
       expect(devizr.feature('hashchange')).toEqual(true);
+    });
+    
+    it("Browser supports HTML5 'template' element", function() {
+      expect(devizr.feature('template')).toEqual(true);
     });
     
   });
@@ -22,14 +26,24 @@ describe("devizr", function() {
   describe("test", function() {
     
     it("devizr.feature('fullscreen') returns a boolean", function() {
-      // Moz only:
-        if (typeof document.mozFullScreen !== 'undefined'){
+      
+			// Moz only:
+      if (typeof document.mozFullScreen !== 'undefined'){
+        expect(devizr.feature('fullscreen')).toBool;
+      }
+			
+    });
+    
+  });  
+  
+  describe("test", function() {
+    
+    it("devizr.resolve('notiFIcatioN') in current FF returns 'Notification'", function() {
 
-          expect(devizr.feature('fullscreen')).toBool;
-          
-        }
+      expect(devizr.resolve('notiFIcatioN')).toBe('Notification');
       
     });
+    
     
   });  
   

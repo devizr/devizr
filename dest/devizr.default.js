@@ -1,5 +1,5 @@
 /*!
- * devizr asset manager 0.5.2
+ * devizr asset manager 0.5.3
  * http://devizr.net
  * Copyright (c) 2013, 2014 Uli Preuss
  * https://raw.githubusercontent.com/up/devizr/master/LICENSE
@@ -18,6 +18,7 @@
       support = [],
       env = [],
       cache = [],
+      vendor = [],
       test, tests = {};
       
     tests = {
@@ -109,8 +110,9 @@
         return test(window, 'applicationCache');
       },
     
-      'connection': function() {
-        return test(navigator, 'connection');
+      'rtcpeerconnection': function() {
+        return test(window, 'RTCPeerConnection', true);
+        //return test(navigator, 'connection');
       },
     
       'notification': function() {
@@ -133,6 +135,10 @@
       'cors': function() {
         return test(window, "XMLHttpRequest") && 
           'withCredentials' in new XMLHttpRequest();
+      },
+      
+      'beacon': function() {
+        return test(navigator, "sendBeacon");
       },
     
       /*** Data related APIs ****************************************************************/
@@ -175,14 +181,6 @@
         return test(window, 'indexedDB', true) && 
           test(window, 'IDBTransaction', true) && 
           test(window, 'IDBKeyRange', true);
-      },
-    
-      'filehandle': function() {
-        // var IDBReq = indexedDB.open("myDB");
-        // return IDBReq.onsuccess = function(){
-        //   var DB = this.result;
-        //   return typeof DB.createObjectStore === 'function';
-        // };    
       },
     
       /*** User related APIs ****************************************************************/
@@ -253,19 +251,22 @@
     
       /*** Time related APIs ****************************************************************/
     
-      'performanceapi': function() {
+      'performance': function() {
         return test(window, 'performance', true);
       },
     
       'highresolutiontime': function() {
-        return test(window, 'performance', true) && 
+        return devizr.feature('performance') && 
           typeof window.performance.now === 'function';
       },
     
       'usertiming': function() {
-        return test(window, 'performance', true) && 
-          typeof window.performance.now === 'function' && 
-          typeof window.performance.mark === 'function' ;
+        return devizr.feature('highresolutiontime') &&
+          typeof window.performance.mark === 'function' &&
+          typeof window.performance.clearMarks === 'function' &&
+          typeof window.performance.measure === 'function' &&
+          typeof window.performance.clearMeasures === 'function' &&
+          typeof window.performance.getEntriesByType === 'function';
       },
     
       'requestanimationframe': function() {
@@ -291,31 +292,65 @@
       
       /*** HTML5 Elements & Attributes ******************************************************/
     
-      'video': function() {
+      'elem-template': function() {
+        return test(window, 'HTMLTemplateElement') && 
+          test('template', 'content');
+      },
+      
+      'elem-video': function() {
         return test(window, 'HTMLVideoElement');
       },
       
-      'audio': function() {
+      'elem-audio': function() {
         return test(window, 'HTMLAudioElement');
       },
       
-      'picture': function() {
+      'elem-picture': function() {
         return test(window, 'HTMLPictureElement');
       },
       
-      'progressmeter': function() {
+      'elem-progress': function() {
         return test(window, 'HTMLProgressElement') && 
-          test('progress', 'max') &&
-          test(window, 'HTMLMeterElement') && 
+          test('progress', 'max');
+      },
+    
+      'elem-meter': function() {
+        return test(window, 'HTMLMeterElement') && 
           test('meter', 'max');
       },
     
-      'attrdownload': function() {
+      'elem-output': function() {
+        return test(window, 'HTMLOutputElement') && 
+          test('output', 'htmlFor') && 
+          test('output', 'form') && 
+          test('output', 'name');
+      },
+      
+      'elem-datalist': function() {
+        return test(window, 'HTMLDataListElement');
+      },
+    
+      'elem-keygen': function() {
+        return test(window, 'HTMLKeygenElement') && 
+          test('keygen', 'challenge');
+        //return test('form' in document.createElement('keygen'));
+      },
+      
+      'elem-details': function() {
+        return test('open' in document.createElement('details'));
+        //return test(window, 'HTMLDetailsElement');
+      },
+    
+      'attr-download': function() {
         return test('a', 'download');
       },
       
-      'attrsandbox': function() {
+      'attr-sandbox': function() {
         return test('iframe', 'sandbox');
+      },
+      
+      'attr-input-pattern': function() {
+        return test('input', 'pattern');
       },
       
       'contextmenu': function() {
@@ -324,8 +359,7 @@
       },
       
       'contenteditable': function() {
-        return test(document.documentElement, 'contenteditable') && 
-          test(window, 'HTMLMenuItemElement');
+        return test(document.documentElement, 'contentEditable');
       },
          
       
@@ -346,12 +380,12 @@
       },
         
       'MOBILE': function() {
-        return (test('android') && test('mobile')) || 
-          (test('blackberry') && test('mobile')) ||
+        return (test('android|blackberry') && test('mobile')) ||
           (test('firefox') && test('fennec')) ||
           (test('windows') && test('phone')) ||
           (test('opera') && test('presto')) ||
           (test('netfront') && !test('kindle')) ||
+          (test('kindle|silk|kfot|kftt|kfjwi|kfjwa') && test('mobile')) ||
           test('iphone|ipod|meego|webos|iemobile') || 
           test('symbianos|doris|dorothy|gobrowser|maemo|minimo') || 
           test('semc-browser|skyfire|teashark|teleca|uzardweb');
@@ -462,6 +496,10 @@
       tests[id] = test_fn;
     }
     
+    function resolve(string) {
+      return vendor[string.toLowerCase()];
+    }
+
     function detectJSFeaturesInIframe() {
     
       var prefixes = ["moz", "Moz", "webkit", "WebKit", "ms", "MS", "o", "O"],
@@ -492,16 +530,20 @@
 
       test = function(iface, prop, prefixed){
         
-        var i, prefixedProp, result = false,
+        var i, prefixedProp, propertyName, result = false,
             re, useragent = window.navigator.userAgent.toLowerCase();
 
         if(arguments.length === 1) {
-
-          re = new RegExp(arguments[0], 'i');
-          return re.test(useragent);
+          
+          if(typeof arguments[0] === 'boolean') {
+            return arguments[0];
+          } else if(typeof arguments[0] === 'string') {
+            re = new RegExp(arguments[0], 'i');
+            return re.test(useragent);
+          }
         
         } else {
-        
+                
           iface = getIframeInterfaces(iface);
 
           if(prefixed) {
@@ -509,14 +551,18 @@
               prefixedProp = prefixes[i] + capitaliseFirstLetter(prop);
               if( prefixedProp in iface) {
                 result = true;
+                propertyName = prefixedProp;
               }
             }    
           }
     
           if(prop in iface) {
             result = true;
+            propertyName = prop;
           }
-    
+          
+          vendor[prop.toLowerCase()] = propertyName;
+          
           return result;
         }
               
@@ -679,13 +725,15 @@
     }
   
     return {
-      version: '0.5.2',
+      version: '0.5.3',
       load : preCheck,
       features: support,
-      env: env,
       feature: supports,
+      env: env,
       tests: tests,
       cache : cache,
+      resolve : resolve,
+      vendor : vendor,
       addTest: addTest,
       init: detectJSFeaturesInIframe
     };
@@ -699,7 +747,6 @@
   }
   else {
     window.devizr = devizr;
-    // init detection
   }
 
 }(window, document, navigator));

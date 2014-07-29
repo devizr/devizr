@@ -91,8 +91,9 @@ tests = {
     return test(window, 'applicationCache');
   },
 
-  'connection': function() {
-    return test(navigator, 'connection');
+  'rtcpeerconnection': function() {
+    return test(window, 'RTCPeerConnection', true);
+    //return test(navigator, 'connection');
   },
 
   'notification': function() {
@@ -115,6 +116,10 @@ tests = {
   'cors': function() {
     return test(window, "XMLHttpRequest") && 
       'withCredentials' in new XMLHttpRequest();
+  },
+  
+  'sendbeacon': function() {
+    return test(navigator, "sendBeacon");
   },
 
   /*** Data related APIs ****************************************************************/
@@ -157,14 +162,6 @@ tests = {
     return test(window, 'indexedDB', true) && 
       test(window, 'IDBTransaction', true) && 
       test(window, 'IDBKeyRange', true);
-  },
-
-  'filehandle': function() {
-    // var IDBReq = indexedDB.open("myDB");
-    // return IDBReq.onsuccess = function(){
-    //   var DB = this.result;
-    //   return typeof DB.createObjectStore === 'function';
-    // };    
   },
 
   /*** User related APIs ****************************************************************/
@@ -235,19 +232,22 @@ tests = {
 
   /*** Time related APIs ****************************************************************/
 
-  'performanceapi': function() {
+  'performance': function() {
     return test(window, 'performance', true);
   },
 
   'highresolutiontime': function() {
-    return test(window, 'performance', true) && 
+    return devizr.feature('performance') && 
       typeof window.performance.now === 'function';
   },
 
   'usertiming': function() {
-    return test(window, 'performance', true) && 
-      typeof window.performance.now === 'function' && 
-      typeof window.performance.mark === 'function' ;
+    return devizr.feature('highresolutiontime') &&
+      typeof window.performance.mark === 'function' &&
+      typeof window.performance.clearMarks === 'function' &&
+      typeof window.performance.measure === 'function' &&
+      typeof window.performance.clearMeasures === 'function' &&
+      typeof window.performance.getEntriesByType === 'function';
   },
 
   'requestanimationframe': function() {
@@ -273,31 +273,65 @@ tests = {
   
   /*** HTML5 Elements & Attributes ******************************************************/
 
-  'video': function() {
+  'elem-template': function() {
+    return test(window, 'HTMLTemplateElement') && 
+      test('template', 'content');
+  },
+  
+  'elem-video': function() {
     return test(window, 'HTMLVideoElement');
   },
   
-  'audio': function() {
+  'elem-audio': function() {
     return test(window, 'HTMLAudioElement');
   },
   
-  'picture': function() {
+  'elem-picture': function() {
     return test(window, 'HTMLPictureElement');
   },
   
-  'progressmeter': function() {
+  'elem-progress': function() {
     return test(window, 'HTMLProgressElement') && 
-      test('progress', 'max') &&
-      test(window, 'HTMLMeterElement') && 
+      test('progress', 'max');
+  },
+
+  'elem-meter': function() {
+    return test(window, 'HTMLMeterElement') && 
       test('meter', 'max');
   },
 
-  'attrdownload': function() {
+  'elem-output': function() {
+    return test(window, 'HTMLOutputElement') && 
+      test('output', 'htmlFor') && 
+      test('output', 'form') && 
+      test('output', 'name');
+  },
+  
+  'elem-datalist': function() {
+    return test(window, 'HTMLDataListElement');
+  },
+
+  'elem-keygen': function() {
+    return test(window, 'HTMLKeygenElement') && 
+      test('keygen', 'challenge');
+    //return test('form' in document.createElement('keygen'));
+  },
+  
+  'elem-details': function() {
+    return test('open' in document.createElement('details'));
+    //return test(window, 'HTMLDetailsElement');
+  },
+
+  'attr-download': function() {
     return test('a', 'download');
   },
   
-  'attrsandbox': function() {
+  'attr-sandbox': function() {
     return test('iframe', 'sandbox');
+  },
+  
+  'attr-input-pattern': function() {
+    return test('input', 'pattern');
   },
   
   'contextmenu': function() {
@@ -306,8 +340,7 @@ tests = {
   },
   
   'contenteditable': function() {
-    return test(document.documentElement, 'contenteditable') && 
-      test(window, 'HTMLMenuItemElement');
+    return test(document.documentElement, 'contentEditable');
   },
      
   
