@@ -250,12 +250,13 @@
     
       /*** Time related APIs ****************************************************************/
     
-      'performance': function() {
-        return test(window, 'performance', true);
+      'navigationtiming': function() {
+        return test(window, 'performance') &&
+    		  typeof window.performance.navigation === 'object';
       },
     
       'highresolutiontime': function() {
-        return devizr.feature('performance') && 
+        return test(window, 'performance') && 
           typeof window.performance.now === 'function';
       },
     
