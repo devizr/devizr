@@ -314,12 +314,12 @@ tests = {
   'elem-keygen': function() {
     return test(window, 'HTMLKeygenElement') && 
       test('keygen', 'challenge');
-    //return test('form' in document.createElement('keygen'));
+			/* return test('form' in document.createElement('keygen')); */
   },
   
   'elem-details': function() {
     return test('open' in document.createElement('details'));
-    //return test(window, 'HTMLDetailsElement');
+    /* return test(window, 'HTMLDetailsElement'); */
   },
 
   'attr-download': function() {
