@@ -231,14 +231,14 @@ tests = {
 
   /*** Time related APIs ****************************************************************/
 
-  'navigationtiming': function() {
-    return test(window, 'performance') &&
-		  typeof window.performance.navigation === 'object';
-  },
-
   'highresolutiontime': function() {
     return test(window, 'performance') && 
       typeof window.performance.now === 'function';
+  },
+
+  'navigationtiming': function() {
+    return test(window, 'performance') &&
+		  typeof window.performance.navigation === 'object';
   },
 
   'usertiming': function() {

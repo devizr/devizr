@@ -1,5 +1,5 @@
 /*!
- * devizr asset manager 0.5.3
+ * devizr asset manager 0.5.4
  * http://devizr.net
  * Copyright (c) 2013, 2014 Uli Preuss
  * https://raw.githubusercontent.com/up/devizr/master/LICENSE
@@ -250,14 +250,14 @@
     
       /*** Time related APIs ****************************************************************/
     
-      'navigationtiming': function() {
-        return test(window, 'performance') &&
-    		  typeof window.performance.navigation === 'object';
-      },
-    
       'highresolutiontime': function() {
         return test(window, 'performance') && 
           typeof window.performance.now === 'function';
+      },
+    
+      'navigationtiming': function() {
+        return test(window, 'performance') &&
+    		  typeof window.performance.navigation === 'object';
       },
     
       'usertiming': function() {
@@ -725,7 +725,7 @@
     }
   
     return {
-      version: '0.5.3',
+      version: '0.5.4',
       load : preCheck,
       features: support,
       feature: supports,
