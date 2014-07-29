@@ -91,10 +91,6 @@ tests = {
     return test(window, 'applicationCache');
   },
 
-  'connection': function() {
-    return test(navigator, 'connection', true);
-  },
-
   'rtcpeerconnection': function() {
     return test(window, 'RTCPeerConnection', true);
   },
